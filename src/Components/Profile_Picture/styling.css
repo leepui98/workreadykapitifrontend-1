@@ -1,5 +1,6 @@
 .visually-hidden {
     display:none;
+    border-radius:50%;
 }
 .upload-picture-button {
     border-style:solid;

@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
  <div className="header">
-Component Black box testing
  </div>
 <div className="middle">
 <LoginPage/>
