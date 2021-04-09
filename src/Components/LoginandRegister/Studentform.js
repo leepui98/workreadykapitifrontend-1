@@ -52,7 +52,7 @@ export default class Studentform extends React.Component {
                             <label htmlFor="school_name">School email Address:</label>
                         </div>
                         <div className="col-lg-7 mb-1">
-                            <input id="school_name" placeholder=" Please enter your first name" onChange={event => {
+                            <input id="school_name" placeholder=" Please enter your school Email Address" onChange={event => {
                                 this.setState({ school_name: event.target.value })
                             }} type="text" className="school_name" required />
                             <span id="school_name_msg" />
