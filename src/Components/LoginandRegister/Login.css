@@ -3,7 +3,7 @@
     height: 100%;
     box-sizing: border-box;
     background:
-    border-box, url(../../src/images/Work_Ready_Passport_Card_Bgrd.jpg) no-repeat center center;
+    border-box, url(../../../src/images/Work_Ready_Passport_Card_Bgrd.jpg) no-repeat center center;
        background-size: cover;
     padding-top: 0px;
     padding-bottom: 12vh;

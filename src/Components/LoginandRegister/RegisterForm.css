@@ -33,7 +33,7 @@
     width: 250px;
     height: 250px;
 
-    background: border-box, url(../../src/images/reg_page_img.jpg) no-repeat center center;
+    background: border-box, url(../../../src/images/reg_page_img.jpg) no-repeat center center;
     background-size: cover;
 }
 #main-div-register{

@@ -2,7 +2,7 @@ import React from 'react';
 import Studentform from "./Studentform"
 import Employerform from "./Employerform"
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Registerform.css"
+import "./RegisterForm.css"
 const ref = React.createRef();
 
 

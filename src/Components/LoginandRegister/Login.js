@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import axios from "../Axios"
+import axios from "../../Axios"
 import { NavLink } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 import './Login.css';

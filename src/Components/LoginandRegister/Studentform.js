@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Registerform.css"
+import "./RegisterForm.css"
 
 export default class Studentform extends React.Component {
 
