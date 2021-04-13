@@ -1,5 +1,4 @@
 
-import React from 'react';
 import './App.css';
 import LoginPage from './Components/Login/login';
 import { Route, Redirect, Switch, BrowserRouter as Router } from 'react-router-dom';

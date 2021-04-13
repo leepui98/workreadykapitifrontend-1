@@ -24,7 +24,7 @@ const PictureUploader = () => {
             <Grid container spacing={2}>
                 
                 <Grid item xs={12}>
-                <img src={src} alt={alt} width = "150px" height = "150px" className="form-img__img-preview"/>
+                <img src={src} alt={alt} width = "300px" height = "300px" className="form-img"/>
                 </Grid>
                 <Grid item xs={12}>
                 <input 
@@ -35,7 +35,7 @@ const PictureUploader = () => {
                     onChange={handleImg}
                 />
                 <label for="img">
-                <IconButton color="primary" aria-label="upload picture" component="span">
+                <IconButton color='secondary' aria-label="upload picture" component="span">
           <PhotoCamera/>
         </IconButton>
         </label>
