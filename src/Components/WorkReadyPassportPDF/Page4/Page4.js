@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
 
-const Page3 = ( props ) => {
+const Page4 = ( props ) => {
 
     const goForward = (e) => {
         props.goForward(e.target.value);
@@ -19,17 +19,23 @@ return (
         <Grid container spacing={2}>
             <Grid item xs={2}/>
             <Grid item xs={8}>
-    <h3> Congratulations for choosing to strive for the Work Ready Passport, { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 1 - Personal Wellness { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Completing the Work Ready Passport will assist you to develop the knowledge and skills that are required by
-employers.
+        You will be asked questions about your commitment to a healthy lifestyle,
+including physical activity, eating and drinking habits and your sleep patterns.
+Use this space to develop your thoughts in preparation for questions about
+this crucial area. What sports do you participate in? For example, are you
+are member of a sports club or gym? If a student, you may find some of
+the material that you have covered in the Health and Physical Education
+curriculum useful as you consider your ideas about this. 
+
         </p>
         <TextField
         multiline 
 rows={12}
 variant="filled"
 fullWidth
-label="Employment Goals:">
+label="Personal Wellness:">
         </TextField>
         </Grid>
         <Grid item xs={2}/>
@@ -40,4 +46,4 @@ label="Employment Goals:">
 )
 
 }
-export default Page3;
+export default Page4;

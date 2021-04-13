@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
 
-const Page3 = ( props ) => {
+const Page6 = ( props ) => {
 
     const goForward = (e) => {
         props.goForward(e.target.value);
@@ -19,17 +19,23 @@ return (
         <Grid container spacing={2}>
             <Grid item xs={2}/>
             <Grid item xs={8}>
-    <h3> Congratulations for choosing to strive for the Work Ready Passport, { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 3 - Communication { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Completing the Work Ready Passport will assist you to develop the knowledge and skills that are required by
-employers.
+        Communication is simply the act of transferring information from one place to
+another whether verbal, written or visual. Think about how you interact with
+people in conversation. Do you make eye contact with people and do you
+listen when being spoken to? Consider your written skills and the language
+you use, both in writing and when speaking. Devices verse face to face – do
+you prefer to talk or text? If we asked your friends how you communicate
+what would they say?
+
         </p>
         <TextField
         multiline 
 rows={12}
 variant="filled"
 fullWidth
-label="Employment Goals:">
+label="Communication">
         </TextField>
         </Grid>
         <Grid item xs={2}/>
@@ -40,4 +46,4 @@ label="Employment Goals:">
 )
 
 }
-export default Page3;
+export default Page6;
