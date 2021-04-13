@@ -1,9 +1,9 @@
+import { Height } from '@material-ui/icons';
 import React, { useState } from 'react'
 import QrReader from 'react-qr-reader'
 
 const QRReader = () => {
         const [result, setResult] = useState('');
-
 
         // if data is handled, set the result string to the data string
     const handleScan = (data) => {
@@ -24,7 +24,7 @@ const QRReader = () => {
             delay={300}
             onError={handleError}
             onScan={handleScan}
-            style={{ width: '50%' }}
+            style={{ width: '30%'}}
           />
           <p>{result}</p>
         </div>

@@ -24,7 +24,7 @@ const PictureUploader = () => {
             <Grid container spacing={2}>
                 
                 <Grid item xs={12}>
-                <img src={src} alt={alt} width = "150px" height = "150px" className="form-img__img-preview"/>
+                <img src={src} alt={alt} width = "300px" height = "300px" className="form-img__img-preview"/>
                 </Grid>
                 <Grid item xs={12}>
                 <input 

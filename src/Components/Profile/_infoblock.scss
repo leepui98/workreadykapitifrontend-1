@@ -3,18 +3,9 @@
     margin-right: 80px;
 }
 
-.editIcon{
-    margin-left: 15px;
-    &:hover{
-        color:#2997ff;
-    }
+.profile-flex-container {
+    width: 50%;
+    align-items: center;
+    text-align:center;
 }
 
-.withValue{
-    font-size: 20px;
-}
-
-.withoutValue{
-    font-size: 15px;
-    color: gray;
-}

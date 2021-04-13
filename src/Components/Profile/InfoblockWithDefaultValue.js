@@ -1,106 +1,42 @@
-import React, { useState,useRef, useCallback } from "react";
+import React, { useState } from "react";
 import "./_infoblock.scss";
-import { EditOutlined} from "@ant-design/icons";
-import { Modal, Input } from "antd";
-import "antd/dist/antd.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import TextField from '@material-ui/core/TextField';
+import { LaptopWindows } from "@material-ui/icons";
 
+const InfoBlock = () => {
 
-const { TextArea } = Input;
-// const titleName= props =>{
-//     return(
-//         {props.name}
-//     )
-// }
+  //Different types of profile information we want to edit
+const [aboutMeSection, setAboutMeSection] = useState(''); //about me information to save into local storage
+const [interests, setInterests] = useState(''); //interests information to save into local storage
 
-// function useInput({type}) {
-//     const [value, setValue] = useState("ohnononono");
-//     const input = <input value={value} onChange={e => setValue(e.target.value)} type={type} />;
-//     return [value, input];
-//   }
-// function PreviousText(value){
-//     const ref= useRef();
-//     useEffect(()=>{
-//         ref.current=value;
-//     });
-//     return ref.current;
-// }
-
-
-export default function Infoblock(props) {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [context, setContext] = useState(props.contextInput);
-  const valueRef= useRef(context);
-  
-//   const[yesNoContext,setContext]=useState(context)
-
-//   const [update, setUpdate] = useState(true);
-//  const prevContext= PreviousText(context)
- 
-// const updateFalse=()=>{
-//     return(<p>{context}</p>,setUpdate(false))
-// }
-
-//   const saveText = (valueInput) => {
-//     setContext(valueInput.target.value);
-//     setUpdate(false);
-//   };
-
-
-
-  
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  
-  const handleOk = () => {
-    // e.preventDefault();
-    setContext(`${valueRef.current.value}`);
-    // const putContext=valueRef.current.getContext();
-    // setContext(putContext);
-    // console.log(`${valueRef.current.value}`)
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
-
-  
-//   const [infotitle, setTitle] = useState({ title: "About" });
-  // const[infotext,setInfo] = useInput({ type: "text" });;
- 
 return (
+<div className='profile-flex-container'>
+<div className='about-me-profile-section'>
 
-<div>
-    <div>
-  <div class="card" className="infosection">
-    <div class="card-header">
-      {props.name}
-      <EditOutlined
-        className="editIcon"
-        style={{ fontSize: "20px" }}
-        onClick={showModal}
-      />
-      <div class="container"></div>
-    </div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-     {context }
-      </blockquote>
-    </div>
-  </div>
-  <Modal
-    title={props.name}
-    visible={isModalVisible}
-    onOk={handleOk}
-    onCancel={handleCancel}
-  >
-    <TextArea rows={4} defaultValue={props.contextInput} type="text" inputRef={valueRef} >
-    </TextArea>
-  </Modal>
-  </div>
-</div>);
-  }
+  <h2> About Me </h2>
+<TextField
+rowsMax={3}
+label="This should be 2-3 sentences. Put your interests here."
+fullWidth
+multiline 
+rows={4}
+variant="filled"
+contentEditable="false"/>
 
+<h2> Interests </h2>
+<TextField
+rowsMax={3} label="This should be bullet points of industries that interest you." fullWidth multiline rows={4} variant="filled" inputProps='Yup' contentEditable="false"
+/>
+
+<h2> Contact Me </h2>
+<TextField
+rowsMax={3} label="This should be an email that employers can use to send a message to you." fullWidth multiline rows={4} variant="filled" inputProps='Yup' contentEditable="false"
+/>
+
+</div>
+</div>
+);
+ }
+
+export default InfoBlock;
