@@ -16,20 +16,28 @@ function Login({setToken, serverURI}) {
     const [username, setUsername] = React.useState('');
     const [password, setPassword] = React.useState('');
 
-    const loginftn=() => {
-        history.push('/home');}
-        // e.preventDefault();
-        // axios.post(`login`, { username:{username}, password:{password}} )
-        //            .then((res) => {
-        //         console.log(serverURI)
-        //         res.data['login'] === 'success' ? setToken('res.data') : alert('Invalid Username or password !!');
-        //         // if(res.data['login'] === 'success') {
-                //     setToken('res.data');
+    const loginftn= e => {
+        e.preventDefault();
+        axios.post(`login`, { username:{username}, password:{password}} ).then((res) => {
+        console.log(res);
+        console.log(serverURI);
+        res.data['login'] === 'success_admin' ? setToken('res.data') : alert('Invalid Username or password !!');
+        if(res.data['login'] === 'success') {
+            setToken('res.data');
+            
+            localStorage.setItem('login-token','success');
+            localStorage.setItem('login-user',username);
+            localStorage.setItem('login-mgr',"false");
+            window.location.reload();
+        }
+    })}
+     
+        
                 //     localStorage.setItem('login-token','success');
                 //     localStorage.setItem('login-user',username);
                 //     localStorage.setItem('login-mgr',"false");
                 //     window.location.reload();
-                // } else
+                // 
                 //   if(res.data['login'] === 'successmgr') {
                 //            setToken('res.data');
                 //            localStorage.setItem('login-token','success');
