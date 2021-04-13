@@ -3,9 +3,13 @@ import ImageUploader from '../../Profile_Picture/PictureUploader';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
+import Button from "@material-ui/core/Button";
 
-const Page2 = () => {
+const Page2 = ( props ) => {
 
+const goForward = (e) => {
+    props.goForward(e.target.value); //retrieve goForward method from props that were passed from WorkReadyPassportHandler
+}
 
 return (
     <div className="page-2-container">
@@ -51,6 +55,7 @@ We wish you the very best in your endeavours to obtain work.
 </Grid>
 </Grid>
 </div>
+<Button onClick={goForward}>Next Step</Button>
 </div>
 )
 }
