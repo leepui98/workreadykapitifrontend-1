@@ -1,7 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import Page1 from './Page2/Page2';
 import Page2 from './Page3/Page3';
-import { useStep } from "react-hooks-helper";
 
 
 const WorkReadyPassportHandler = () => {

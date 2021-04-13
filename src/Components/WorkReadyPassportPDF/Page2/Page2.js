@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ImageUploader from '../../Profile_Picture/PictureUploader';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
