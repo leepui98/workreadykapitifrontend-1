@@ -51,6 +51,7 @@ We wish you the very best in your endeavours to obtain work.
 <Grid item xs= {2}/>
 </Grid>
 </div>
+<Button>Back to your Profile</Button>
 <Button onClick={goForward}>Next Step</Button>
 </div>
 )

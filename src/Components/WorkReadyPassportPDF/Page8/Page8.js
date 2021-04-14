@@ -31,7 +31,10 @@ How does the government and employers contribute to your KiwiSaver?
 rows={12}
 variant="filled"
 fullWidth
-label="Managing Your Money">
+label="Do you know how
+KiwiSaver can
+contribute to buying
+your first home?">
         </TextField>
         </Grid>
         <Grid item xs={2}/>

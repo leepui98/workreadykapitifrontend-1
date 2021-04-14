@@ -35,7 +35,9 @@ curriculum useful as you consider your ideas about this.
 rows={12}
 variant="filled"
 fullWidth
-label="Personal Wellness:">
+label="How would you
+stay healthy to maintain
+your employment?">
         </TextField>
         </Grid>
         <Grid item xs={2}/>
