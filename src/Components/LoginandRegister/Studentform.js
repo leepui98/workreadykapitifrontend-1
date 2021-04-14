@@ -1,9 +1,10 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./RegisterForm.css"
+import "./RegisterForm.css";
+import Checkbox from '../Disclaimerview/checkbox';
 
 export default class Studentform extends React.Component {
-
+    
     render() {
 
         return (
@@ -85,10 +86,16 @@ export default class Studentform extends React.Component {
                                         <option value="telecom">Telecommunication</option>
                                         <option value="retail">Retail</option>
                                     </select>
-
-                                </div>
                                 <span id="Project_industry_msg"/>
                             </div>
+                        </div>
+                    </div>
+
+                    </div>
+                                <div className="row">
+                        <div className="col-lg-7 mb-1">
+                            <Checkbox />
+                            <span id="disclaimer_msg" />
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import Login from "./Components/LoginandRegister/Login";
 import Registerform from "./Components/LoginandRegister/RegisterForm";
 import ForgetPass from "./Components/LoginandRegister/ForgetPass";
 import Home from "./Components/LoginandRegister/Home";
+import ProfilePage from "./Components/Profile/ProfilePage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                  <Route path="/register" component={Registerform}/>
                  <Route path="/forgpass" component={ForgetPass}/>
                  <Route path="/LoginPage" component={LoginPage}/>
+                 <Route path="/profile" component={ProfilePage} />
                  <Redirect to="/home"/> 
                  </Switch>
              </main>
