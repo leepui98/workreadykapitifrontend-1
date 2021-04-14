@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
 
-const Page3 = ( props ) => {
+const Page7 = ( props ) => {
 
     const goForward = (e) => {
         props.goForward(e.target.value);
@@ -19,17 +19,22 @@ return (
         <Grid container spacing={2}>
             <Grid item xs={2}/>
             <Grid item xs={8}>
-    <h3> Congratulations for choosing to strive for the Work Ready Passport, { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 4 - Academic Achievements { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Completing the Work Ready Passport will assist you to develop the knowledge and skills that are required by
-employers.
+        Provide details of all academic courses and training you have finished.
+Your NZQA Record of Learning provides complete information about the
+achievement and unit standards that you have been assessed against.
+Please bring an up-to-date print out of this with you to the assessment.
+You will be able to access this from your school, tertiary education provider
+or from NZQA.
+
         </p>
         <TextField
         multiline 
 rows={12}
 variant="filled"
 fullWidth
-label="Employment Goals:">
+label="Academic Achievements">
         </TextField>
         </Grid>
         <Grid item xs={2}/>
@@ -40,4 +45,4 @@ label="Employment Goals:">
 )
 
 }
-export default Page3;
+export default Page7;
