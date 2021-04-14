@@ -23,6 +23,25 @@
     font-weight: bold;
 
 }
+.ind_select_inputs{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: black;
+    font-weight: bold; 
+      
+
+}
+#ind_input{
+   
+  
+    color: black;
+      display: flex;
+  }
+
+
 @media (max-width: 600px) {
     #img_background {
       display: none;

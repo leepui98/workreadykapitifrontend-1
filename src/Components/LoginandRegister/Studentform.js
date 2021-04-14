@@ -63,36 +63,36 @@ export default class Studentform extends React.Component {
                             <label htmlFor="school_name">Personal email Address:</label>
                         </div>
                         <div className="col-lg-7 mb-1">
-                            <input id="school_name" placeholder=" Please enter your first name" onChange={event => {
+                            <input id="school_name" placeholder=" Please enter your personal email address" onChange={event => {
                                 this.setState({ school_name: event.target.value })
                             }} type="text" className="school_name" required />
                             <span id="school_name_msg" />
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-5 mb-4 form-floating">
-                            <div className="control-group form-group">
-                                <div className="controls">
-                                    <label>Industry:</label>
-                                    <select id="Project_industry" name="industry" className="form-control" required
-                                            onChange={event => {
-                                                this.setState({project_industry: event.target.value})
-                                            }}>
-                                        <option disabled selected value="-1">-- Select Industry-</option>
-                                        <option value="banking">Banking</option>
-                                        <option value="healthcare"> Heath Care</option>
-                                        <option value="education"> Education</option>
-                                        <option value="telecom">Telecommunication</option>
-                                        <option value="retail">Retail</option>
-                                    </select>
-
-                                </div>
-                                <span id="Project_industry_msg"/>
-                            </div>
+                        <div className="col-lg-5 mb-1">
+                            <label>Industry:</label>
                         </div>
+                        <div className="col-lg-4  ind_select_inputs">
+                            <div id="ind_input">
+                                <input type="radio" value="ind1" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_retail" /> Retail
+                       </div>
+                            <div id="ind_input">
+                                <input type="radio" value="ind2" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_construction" /> construction
+                             </div>
+                         <div id="ind_input">
+                                <input type="radio" value="ind3" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_logistics" /> logistics
+                            </div>
+                            <div id="ind_input">
+                                <input type="radio" value="ind4" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_hospitality" /> hospitality
+                            </div>
+                            </div>
+                            <span id="Project_industry_msg" />
+                        
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
+            
         )
     }
 }
