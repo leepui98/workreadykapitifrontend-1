@@ -7,6 +7,7 @@ import Registerform from "./Components/LoginandRegister/RegisterForm";
 import ForgetPass from "./Components/LoginandRegister/ForgetPass";
 import Home from "./Components/LoginandRegister/Home";
 import ProfilePage from "./Components/Profile/ProfilePage";
+import WorkReadyPassportHandler from "./Components/WorkReadyPassportPDF/WorkReadyPassportHandler";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                  <Route path="/forgpass" component={ForgetPass}/>
                  <Route path="/LoginPage" component={LoginPage}/>
                  <Route path="/profile" component={ProfilePage} />
+                 <Route path="/kapitiworkreadypassport" component={WorkReadyPassportHandler} />
                  <Redirect to="/home"/> 
                  </Switch>
              </main>
