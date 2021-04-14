@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
 
-const Page3 = ( props ) => {
+const Page9 = ( props ) => {
 
     const goForward = (e) => {
         props.goForward(e.target.value);
@@ -19,17 +19,17 @@ return (
         <Grid container spacing={2}>
             <Grid item xs={2}/>
             <Grid item xs={8}>
-    <h3> Congratulations for choosing to strive for the Work Ready Passport, { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 6 - Drug Free { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Completing the Work Ready Passport will assist you to develop the knowledge and skills that are required by
-employers.
+        Explain why it is important to be drug free in the work place. Use the space
+below to prepare your thoughts around the job you are looking for. 
         </p>
         <TextField
         multiline 
 rows={12}
 variant="filled"
 fullWidth
-label="Employment Goals:">
+label="Why is it important to be drug free in the workplace?">
         </TextField>
         </Grid>
         <Grid item xs={2}/>
@@ -40,4 +40,4 @@ label="Employment Goals:">
 )
 
 }
-export default Page3;
+export default Page9;

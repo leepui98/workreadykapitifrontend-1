@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
 
-const Page3 = ( props ) => {
+const Page10 = ( props ) => {
 
     const goForward = (e) => {
         props.goForward(e.target.value);
@@ -19,17 +19,19 @@ return (
         <Grid container spacing={2}>
             <Grid item xs={2}/>
             <Grid item xs={8}>
-    <h3> Congratulations for choosing to strive for the Work Ready Passport, { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 7 - Work Experience { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Completing the Work Ready Passport will assist you to develop the knowledge and skills that are required by
-employers.
+        List here any work placement, or jobs you have done in the past two years.
+Include part-time work, Gateway placement, work experience, community
+projects, jobs / responsibilities around home, and school projects. What do
+you enjoy about your work experience?
         </p>
         <TextField
         multiline 
 rows={12}
 variant="filled"
 fullWidth
-label="Employment Goals:">
+label="Don't forget to attach your references">
         </TextField>
         </Grid>
         <Grid item xs={2}/>
@@ -40,4 +42,4 @@ label="Employment Goals:">
 )
 
 }
-export default Page3;
+export default Page10;

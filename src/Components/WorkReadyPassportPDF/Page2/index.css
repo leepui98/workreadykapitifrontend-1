@@ -1,13 +1,17 @@
 .page-2-container {
 align-items: center;
-color: #f68b1f
+color: #f68b1f;
 }
 
 .first-page-text-desc {
     text-align: justify;
-    color: #f68b1f
+    color: #f68b1f;
 }
 .page-2-text-space {
     border-style: solid;
-    padding:2%
+    padding:2%;
 }
+.h6 {
+    text-align:center;
+}
+

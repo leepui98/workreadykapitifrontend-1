@@ -16,29 +16,24 @@ return (
 <div>
     <Grid container spacing={2}>
     <Grid item xs = {12}>
-    <h3> Choose a Photo of Yourself </h3>
+    <h3> Upload a Photo of Yourself </h3>
 <ImageUploader/>
 </Grid>
-<Grid item xs = {12}>
+<Grid item xs = {2}/>
+<Grid item xs = {8}>
 <TextField
-label="Your Full Name e.g. Jane Smith" fullWidth>
+label="Full Name" fullWidth>
+</TextField>
+<TextField
+    label="Phone Number" fullWidth>
+</TextField>
+<TextField
+label="Email Address" fullWidth>
 </TextField>
 </Grid>
-<Grid item xs = {12}>
-<TextField
-    label="Your Phone Number e.g. 020-0000000" fullWidth>
-</TextField>
-</Grid>
-<Grid item xs = {12}>
-<TextField
-label="Your Email Address e.g. Jane@Example.com" fullWidth
->
-</TextField>
-</Grid>
-<Grid item xs = {4}>
-
-</Grid>
-<Grid item xs={7} className='first-page-text-desc'>
+<Grid item xs = {2}/>
+<Grid item xs= {2}/>
+<Grid item xs = {8} className='first-page-text-desc'>
     <div className='page-2-text-space'>
 <h6>Foreword by Bryan Gundersen, Chair of the Kāpiti Youth Employment Foundation</h6>
 (commonly referred to as Work Ready Kāpiti)
@@ -53,6 +48,7 @@ makes you “work ready”.
 We wish you the very best in your endeavours to obtain work.
 </div>
 </Grid>
+<Grid item xs= {2}/>
 </Grid>
 </div>
 <Button onClick={goForward}>Next Step</Button>
