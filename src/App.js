@@ -6,6 +6,7 @@ import Login from "./Components/LoginandRegister/Login";
 import Registerform from "./Components/LoginandRegister/RegisterForm";
 import ForgetPass from "./Components/LoginandRegister/ForgetPass";
 import Home from "./Components/LoginandRegister/Home";
+import React from 'react';
 export default App;
 
 function App() {
