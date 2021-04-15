@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProfilePageMobile from "./ProfilePageMobile";
-import ProfilePageDesktop from "./ProfilePageDesktop"
+import "./ProfilePageMobile";
+import "./ProfilePageDesktop"
 
 const useViewport = () => {
     const [width, setWidth] = React.useState(window.innerWidth);

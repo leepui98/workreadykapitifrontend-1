@@ -27,19 +27,19 @@ export default function navigation() {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
-        <Nav className="justify-content-center m-auto">
+        <Nav className="justify-content-center">
         <Nav.Item>
-        <Nav.Link className="navitemd" href="/profile" >Profile</Nav.Link>
+        <Nav.Link className="navitem" href="/profile">Profile</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-        <Nav.Link className="navitemd" href="/joblisting">JobListing</Nav.Link>
+        <Nav.Link className="navitem" href="/joblisting">JobListing</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-        <Nav.Link className="navitemd" href="/meetup">MeetUp</Nav.Link>
+        <Nav.Link className="navitem" href="/meetup">MeetUp</Nav.Link>
         </Nav.Item>
-        </Nav>
-       <Nav>
-        <Nav.Link  href="/logout">Logout</Nav.Link>
+        <Nav.Item>
+        <Nav.Link className="navitem" href="/logout">Logout</Nav.Link>
+        </Nav.Item>
         </Nav>
           
       </Navbar>
