@@ -8,3 +8,22 @@ text-align: center;
     outline:solid;
 
 }
+
+body {
+    padding-left:5%;
+    padding-right:5%;
+    text-align: center;
+}
+
+h3 {
+    color: orange;
+}
+p {
+    text-align:center;
+}
+.textfield-container {
+    border-style:solid;
+}
+.employment-goals-title {
+    text-align:left;
+}

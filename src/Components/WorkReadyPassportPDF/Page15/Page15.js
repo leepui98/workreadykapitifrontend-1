@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Grid } from '@material-ui/core';
 import './index.css';
 import TextField from '@material-ui/core/TextField';
+import CornerLogo from '../../../images/Corner-logo.png';
 
 const Page15 = ( props ) => {
 
@@ -15,10 +16,14 @@ const Page15 = ( props ) => {
     }
 
     return (
+        <body>
     <div>
     <Grid container spacing={2}>
-        <Grid item xs={2}/>
-        <Grid item xs={8}>
+    <Grid item xs={12}>
+       <img src={CornerLogo} width='200px' height='200px'/>
+       <br/>
+    </Grid>
+        <Grid item xs={12}>
 <h3> Step 12 - Character References { /* get full name prop from WorkReadyPassportHandler */}</h3>
     <p>
     Please include a copy of your REFERENCES.
@@ -29,6 +34,7 @@ provides evidence of your good character, punctuality and timeliness, your
 ability to work with others (including those from different culture) and fitness
 for work. You are welcome to include more than one reference.
     </p>
+    <br/>
     <div className='fields-container'>
     <h3> Reference #1</h3>
     <TextField
@@ -57,13 +63,16 @@ label="Full Name">
 fullWidth
 label="Contact Information">
     </TextField>
+    <br/>
+    <br/>
     </div>
     </Grid>
-    <Grid item xs={2}/>
     </Grid>
+    <br/>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
 <Button className= "Button" onClick={goForward}>Next Step</Button>
 </div>
+</body>
 )
 
 }

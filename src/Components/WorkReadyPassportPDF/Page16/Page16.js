@@ -3,7 +3,8 @@ import * as React from 'react';
 import { Grid } from '@material-ui/core';
 import './index.css';
 import TextField from '@material-ui/core/TextField';
-import SignatureCanvas from 'react-signature-canvas'
+import SignatureCanvas from 'react-signature-canvas';
+import CornerLogo from '../../../images/Corner-logo.png';
 
 const Page16 = ( props ) => {
 
@@ -16,10 +17,14 @@ const Page16 = ( props ) => {
     }
 
     return (
+        <body>
     <div>
     <Grid container spacing={2}>
-        <Grid item xs={2}/>
-        <Grid item xs={8}>
+    <Grid item xs={12}>
+       <img src={CornerLogo} width='200px' height='200px'/>
+       <br/>
+    </Grid>
+        <Grid item xs={12}>
 <h3> Lastly- The Registration Form for Interviews! { /* get full name prop from WorkReadyPassportHandler */}</h3>
     <div className='fields-container'>
     <TextField
@@ -61,14 +66,16 @@ label="Which City?">
     <h3>Draw your electronic signature on the canvas below.</h3>
     <div className='signature-container'>
     <SignatureCanvas penColor='green' className='signature-area'
-    canvasProps={{maxWidth: '300%', height: '100%', className: 'sigCanvas'}} />
+    canvasProps={{ className: 'sigCanvas'}} />
     </div>
     </div>
     </Grid>
-    <Grid item xs={2}/>
     </Grid>
+    <Button className= "Button" onClick={goBackward}>Save and Return to Profile</Button>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
+    <Button className= "Button" onClick={goBackward}>Review your Information</Button>
 </div>
+</body>
 )
 
 }

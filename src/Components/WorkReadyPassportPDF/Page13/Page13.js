@@ -3,6 +3,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
+import CornerLogo from '../../../images/Corner-logo.png';
 
 const Page13 = ( props ) => {
 
@@ -15,32 +16,40 @@ const Page13 = ( props ) => {
     }
 
 return (
+    <body>
     <div>
         <Grid container spacing={2}>
-            <Grid item xs={2}/>
-            <Grid item xs={8}>
-    <h3> Step 10 - Restricted Drivers License Class 1 Endorsement { /* get full name prop from WorkReadyPassportHandler */}</h3>
+        <Grid item xs={12}>
+       <img src={CornerLogo} width='200px' height='200px'/>
+       <br/>
+    </Grid>
+            <Grid item xs={12}>
+    <h3> Step 10 - Restricted Drivers License Class 1 Endorsement{ /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Many jobs in our area need employees to have a restricted driver’s licence
-and manual driving experience. If there is a legitimate reason why you cannot
-progress your driver’s license please note that here, reasons may include
-medical conditions or financial hardship. Please bring your NZTA licence
-endorsements with you and list the details below. Do you have other NZTA
-licence endorsements for example forklift or motorbike? 
+        Many jobs in our area need employees to have a restricted driver’s licence and manual driving experience.
+         If there is a legitimate reason why you cannot progress your driver’s license please note that here, reasons 
+         may include medical conditions or financial hardship. Please bring your NZTA licence endorsements with you and 
+         list the details below. Do you have other NZTA licence endorsements for example forklift or motorbike?
         </p>
+        <br/>
+        <h3 className='personal-wellness-title'>Can you confidently
+drive a manual vehicle? </h3>
+        <div className="textfield-container">
         <TextField
         multiline 
 rows={12}
-variant="filled"
+variant="outlined"
 fullWidth
-label="Can you confidently drive a manual vehicle?">
+>
         </TextField>
+        </div>
         </Grid>
-        <Grid item xs={2}/>
         </Grid>
+        <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
+    </body>
 )
 
 }

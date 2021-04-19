@@ -3,6 +3,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
+import CornerLogo from '../../../images/Corner-logo.png';
 
 const Page5 = ( props ) => {
 
@@ -15,10 +16,14 @@ const Page5 = ( props ) => {
     }
 
 return (
+    <body>
     <div>
         <Grid container spacing={2}>
-            <Grid item xs={2}/>
-            <Grid item xs={8}>
+        <Grid item xs={12}>
+       <img src={CornerLogo} width='200px' height='200px'/>
+       <br/>
+    </Grid>
+            <Grid item xs={12}>
     <h3> Step 2 - Life Skills { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
         The ability to cope with stresses and challenges of daily life, using skills such
@@ -30,21 +35,24 @@ charity, outdoor education activities or organisation of youth event. Don’t
 forget looking after your family is a very important life skill.
 
         </p>
+        <br/>
+        <h3 className='personal-wellness-title'>What did you enjoy about working on a project?</h3>
+        <div className="textfield-container">
         <TextField
         multiline 
 rows={12}
-variant="filled"
+variant="outlined"
 fullWidth
-label="What did you
-enjoy about working
-on a project?">
+>
         </TextField>
+        </div>
         </Grid>
-        <Grid item xs={2}/>
         </Grid>
+        <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
+    </body>
 )
 
 }

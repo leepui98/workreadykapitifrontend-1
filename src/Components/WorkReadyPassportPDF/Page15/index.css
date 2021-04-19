@@ -6,3 +6,10 @@ h3 {
     border-style: solid;
     padding: 20px;
 }
+
+body {
+    padding-left:5%;
+    padding-right:5%;
+    text-align: center;
+    
+}

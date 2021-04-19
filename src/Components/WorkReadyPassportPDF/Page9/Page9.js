@@ -3,8 +3,9 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
+import CornerLogo from '../../../images/Corner-logo.png';
 
-const Page9 = ( props ) => {
+const Page6 = ( props ) => {
 
     const goForward = (e) => {
         props.goForward(e.target.value);
@@ -15,29 +16,40 @@ const Page9 = ( props ) => {
     }
 
 return (
+    <body>
     <div>
         <Grid container spacing={2}>
-            <Grid item xs={2}/>
-            <Grid item xs={8}>
+        <Grid item xs={12}>
+       <img src={CornerLogo} width='200px' height='200px'/>
+       <br/>
+    </Grid>
+            <Grid item xs={12}>
     <h3> Step 6 - Drug Free { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
         Explain why it is important to be drug free in the work place. Use the space
 below to prepare your thoughts around the job you are looking for. 
         </p>
+        <br/>
+        <h3 className='personal-wellness-title'>Why is it important
+to be drug free in the
+workplace?</h3>
+        <div className="textfield-container">
         <TextField
         multiline 
 rows={12}
-variant="filled"
+variant="outlined"
 fullWidth
-label="Why is it important to be drug free in the workplace?">
+>
         </TextField>
+        </div>
         </Grid>
-        <Grid item xs={2}/>
         </Grid>
+        <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
+    </body>
 )
 
 }
-export default Page9;
+export default Page6;

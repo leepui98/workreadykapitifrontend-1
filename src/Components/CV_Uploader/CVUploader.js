@@ -15,12 +15,10 @@ const CVUploader = () => {
     return (
             <div className="form__img-input-container">
             <Grid container spacing={2}>
-                <Grid item xs = {12}>
-                    Upload your CV
-                </Grid>
                 <Grid item xs={12}>
                 <input 
                     type="file"
+                    accept=".pdf, .docx"
                     id="cv" 
                     onChange={handleCV}
                 />

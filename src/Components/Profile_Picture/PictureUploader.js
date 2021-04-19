@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {Grid, IconButton} from '@material-ui/core';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import './styling.css';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const PictureUploader = () => {
     const [{alt, src}, setImg] = useState({
@@ -20,30 +19,26 @@ const PictureUploader = () => {
     }
 
     return (
-            <div className="form__img-input-container">
-            <Grid container spacing={2}>
-                
-                <Grid item xs={12}>
-                <img src={src} alt={alt} width = "300px" height = "300px" className="form-img"/>
-                </Grid>
-                <Grid item xs={12} >
-                <input 
+        <div className="picture-container">
+                <div className = "img-container">
+                <img src={src} alt={alt} className="form-img"/>
+                </div>
+                <input className="form-img"
                     type="file"
                     id="img" 
                     accept=".png, .jpg, .jpeg" 
                     className="visually-hidden"
                     onChange={handleImg}
+                    alignItems="center"
+                    component="span" display="flex"
                 />
+                <br></br>
                 <label for="img">
-                <IconButton color="primary" aria-label="upload picture" component="span" display="flex" alignItems="center"
-        justifyContent="center">
+                <IconButton color="primary" aria-label="upload picture" component="span">
           <PhotoCamera/>
         </IconButton>
         </label>
-                </Grid>
-                
-                </Grid>
-            </div>
+        </div>
 
     );
 }

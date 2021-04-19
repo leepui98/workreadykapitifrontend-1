@@ -1,17 +1,51 @@
-.page-2-container {
-align-items: center;
-color: #f68b1f;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+.grid-container {
+    text-align: center;
+    align-items:center;
+    justify-content: center;
 }
 
-.first-page-text-desc {
-    text-align: justify;
-    color: #f68b1f;
+body {
+    padding-left:5%;
+    padding-right:5%;
+    text-align: center;
+    
 }
-.page-2-text-space {
-    border-style: solid;
+
+h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+}
+
+h4 {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+h6 {
+    text-align:justify;
+    color:black;
+}
+p {
+    text-align: justify;
+    color:black;
+}
+.foreword-wrapper {
+    border-style:solid;
     padding:2%;
 }
-.h6 {
-    text-align:center;
-}
 
+.foreword {
+    font-style:italic;
+}
+.header {
+    padding: 60px;
+    text-align: center;
+    background: orange;
+    color: black;
+    font-size: 30px;
+  }
+  .form-container {
+      display:flex;
+      flex-direction:row;
+  }

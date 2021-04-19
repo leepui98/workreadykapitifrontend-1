@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import './index.css';
 import Button from "@material-ui/core/Button";
+import CornerLogo from '../../../images/Corner-logo.png';
 
 const Page2 = ( props ) => {
 
@@ -12,15 +13,18 @@ const goForward = (e) => {
 }
 
 return (
-    <div className="page-2-container">
-<div>
-    <Grid container spacing={2}>
-    <Grid item xs = {12}>
-    <h3> Upload a Photo of Yourself </h3>
+    <body>
+<Grid container spacing={2} className='grid-container'>
+    <Grid item xs={12}>
+       <img src={CornerLogo} width='200px' height='200px'/>
+    </Grid>
+    <Grid item xs={12}>
+        <br/>
+        <h3>Welcome to Your Digitized Kapiti Work Ready Passport.</h3>
+        <br/>
 <ImageUploader/>
 </Grid>
-<Grid item xs = {2}/>
-<Grid item xs = {8}>
+<Grid item xs={12}>
 <TextField
 label="Full Name" fullWidth>
 </TextField>
@@ -31,13 +35,11 @@ label="Full Name" fullWidth>
 label="Email Address" fullWidth>
 </TextField>
 </Grid>
-<Grid item xs = {2}/>
-<Grid item xs= {2}/>
-<Grid item xs = {8} className='first-page-text-desc'>
-    <div className='page-2-text-space'>
-<h6>Foreword by Bryan Gundersen, Chair of the Kāpiti Youth Employment Foundation</h6>
-(commonly referred to as Work Ready Kāpiti)
-Welcome to the Work Ready Kāpiti Passport Workbook.
+<Grid item xs={12}>
+    <br></br>
+    <div className='foreword-wrapper'>
+<h6>Welcome to the Work Ready Kāpiti Passport Workbook.</h6>
+<p>
 Work Ready Kāpiti’s mission is to help Kāpiti youth into jobs by building pathways to
 employment and thereby assist in the development of the Kāpiti Coast as a strong and
 vibrant community which is successful both economically and socially.
@@ -45,15 +47,14 @@ The Work Ready Kāpiti Passport programme provides a pathway to youth employment
 by completing the Passport Workbook you will develop the knowledge and skills that
 are required by employers and illustrate that you have the work ethic and attitude which
 makes you “work ready”.
-We wish you the very best in your endeavours to obtain work.
+We wish you the very best in your endeavours to obtain work.</p>
+<p className="foreword">Foreword by Bryan Gundersen, Chair of the Kāpiti Youth Employment Foundation (commonly referred to as Work Ready Kāpiti)</p>
 </div>
 </Grid>
-<Grid item xs= {2}/>
+<Button><br/>Back to your Profile</Button>
+<Button onClick={goForward}><br/>Next Step</Button>
 </Grid>
-</div>
-<Button>Back to your Profile</Button>
-<Button onClick={goForward}>Next Step</Button>
-</div>
+</body>
 )
 }
 export default Page2;

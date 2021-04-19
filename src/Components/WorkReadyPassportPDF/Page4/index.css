@@ -8,3 +8,16 @@ text-align: center;
     outline:solid;
 
 }
+body {
+    padding-left:5%;
+    padding-right:5%;
+    text-align: center;
+}
+
+.personal-wellness-title {
+    text-align:left;
+}
+
+.textfield-container {
+    border-style:solid;
+}

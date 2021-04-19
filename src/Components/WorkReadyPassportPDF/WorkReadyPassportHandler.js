@@ -17,6 +17,7 @@ import Page15 from './Page16/Page16';
 
 
 const WorkReadyPassportHandler = () => {
+    
 
     const [step, setStep] = useState(1); //step will be used for switch cases between each conponentised page of the WRKP.
     const [stepper, setStepper] = useState(0); //stepper will be a visual stepping module
