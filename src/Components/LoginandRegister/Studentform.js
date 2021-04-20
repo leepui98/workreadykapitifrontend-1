@@ -4,7 +4,6 @@ import "./RegisterForm.css";
 import Checkbox from '../Disclaimerview/checkbox';
 
 export default class Studentform extends React.Component {
-<<<<<<< HEAD
     constructor(props) {
         super(props);
         this.state = {
@@ -13,9 +12,6 @@ export default class Studentform extends React.Component {
 
     }
 
-=======
-    
->>>>>>> f06cba59b362202899f57c9808a37d856ce3758e
     render() {
 
         return (
@@ -82,10 +78,6 @@ export default class Studentform extends React.Component {
                         </div>
                     </div>
                     <div className="row">
-<<<<<<< HEAD
-                        <div className="col-lg-5 mb-1">
-                            <label>Industry:</label>
-=======
                         <div className="col-lg-5 mb-4 form-floating">
                             <div className="control-group form-group">
                                 <div className="controls">
@@ -103,7 +95,6 @@ export default class Studentform extends React.Component {
                                     </select>
                                 <span id="Project_industry_msg"/>
                             </div>
->>>>>>> f06cba59b362202899f57c9808a37d856ce3758e
                         </div>
                         <div id="ind_select_inputs">
                            
@@ -121,11 +112,6 @@ export default class Studentform extends React.Component {
                             <span id="Project_industry_msg" />
                         
                     </div>
-<<<<<<< HEAD
-                </div >
-            </div >
-            
-=======
 
                     </div>
                                 <div className="row">
@@ -136,7 +122,6 @@ export default class Studentform extends React.Component {
                     </div>
                 </div>
             </div>
->>>>>>> f06cba59b362202899f57c9808a37d856ce3758e
         )
     }
 }

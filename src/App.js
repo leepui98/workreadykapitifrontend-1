@@ -7,10 +7,10 @@ import Registerform from "./Components/LoginandRegister/RegisterForm";
 import ForgetPass from "./Components/LoginandRegister/ForgetPass";
 import Home from "./Components/LoginandRegister/Home";
 import React from 'react';
-export default App;
+
 import ProfilePage from "./Components/Profile/ProfilePage";
 import WorkReadyPassportHandler from "./Components/WorkReadyPassportPDF/WorkReadyPassportHandler";
-
+export default App;
 function App() {
   const [token, setToken] = React.useState('');
   let token1 = localStorage.getItem('login-token');
