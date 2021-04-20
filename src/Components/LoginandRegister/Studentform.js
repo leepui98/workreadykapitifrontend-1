@@ -3,6 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./RegisterForm.css"
 
 export default class Studentform extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            date_of_birth: "", school_name:"my school", ph_number: "", school_email : "", email: "", industry: [],
+        };
+
+    }
 
     render() {
 
@@ -73,19 +80,18 @@ export default class Studentform extends React.Component {
                         <div className="col-lg-5 mb-1">
                             <label>Industry:</label>
                         </div>
-                        <div className="col-lg-4  ind_select_inputs">
-                            <div id="ind_input">
-                                <input type="radio" value="ind1" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_retail" /> Retail
-                       </div>
-                            <div id="ind_input">
-                                <input type="radio" value="ind2" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_construction" /> construction
-                             </div>
-                         <div id="ind_input">
-                                <input type="radio" value="ind3" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_logistics" /> logistics
-                            </div>
-                            <div id="ind_input">
-                                <input type="radio" value="ind4" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_hospitality" /> hospitality
-                            </div>
+                        <div id="ind_select_inputs">
+                           
+                            <label id = "ind_check"><input  type="checkbox" value="ind1" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_retail" /> Retail
+                            </label> 
+                            
+                               <label id = "ind_check"> <input   type="checkbox" value="ind2" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_construction" /> constr
+                               </label> 
+                        
+                               <label id = "ind_check"> <input type="checkbox" value="ind3" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_logistics" /> logistics
+                         </label> 
+                         <label id = "ind_check"> <input type="checkbox" value="ind4" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_hospitality" /> hospitality
+                            </label>
                             </div>
                             <span id="Project_industry_msg" />
                         

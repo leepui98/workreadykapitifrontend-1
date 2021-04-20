@@ -11,10 +11,22 @@ export default class Registerform extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            reg_status: ""
+            reg_status: "", first_name:"", last_name: "", user_name: "", pass: "", re_pass: "",
         };
 
     }
+    registerftn = ()=> {
+    if(this.state.reg_status === "student"){this.register_student()}else
+      if(this.state.reg_status === "Employer"){this.register_employer()}
+    }
+    register_student = ()=> {
+        console.log("hello");
+        console.log(this.props.school_name)
+        if(this.props.school_name===""){console.log("no school")}
+        }
+        register_employer = ()=> {
+      
+        }
     render() {
         return (
 
@@ -98,7 +110,7 @@ export default class Registerform extends React.Component {
                     </div>
                     {this.state.reg_status === "student" ? <Studentform /> : <div></div>}
                     {this.state.reg_status === "Employer" ? <Employerform /> : <div></div>}
-                    {this.state.reg_status ? <button>Submit</button> : <div></div>}
+                    {this.state.reg_status ? <button onClick ={()=>this.registerftn()}>Submit</button> : <div></div>}
                 </div>
 
             </div>
