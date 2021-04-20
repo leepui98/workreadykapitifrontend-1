@@ -34,7 +34,10 @@ or from NZQA.
 rows={12}
 variant="filled"
 fullWidth
-label="Academic Achievements">
+label="List any courses
+and/or qualifications
+you have completed
+below.">
         </TextField>
         </Grid>
         <Grid item xs={2}/>

@@ -77,7 +77,9 @@ function register(){ history.push('/register')}
                     </div>
 
                     <div className="col-lg-12 text-center">
+                        <NavLink to="/profile" exact>
                         <button onClick={loginftn}  className="btn btn-primary" id = "login-btn" type="submit"> LOGIN</button>
+                        </NavLink>
                     </div>
                     <div >
                     <NavLink to="/forgpass" exact>Forget Username/Password</NavLink>

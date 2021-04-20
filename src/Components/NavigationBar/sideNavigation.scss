@@ -1,0 +1,38 @@
+
+
+.expandNav{
+    width:150px;
+    height: calc(100% -50px);
+    background:rgb(51, 51, 51);
+    position:absolute;
+    top: 50px;
+    right:0;
+    // left: -300px;
+    // transition:300ms ease left;
+    // flex-direction:column-reverse;
+    // padding: 0;
+    // margin-left: 80px;
+    
+  .navitem{
+      color:honeydew;
+     margin-left: 25px;
+     margin-right: 10px;
+  }
+
+  .navitem:hover{
+      background-color: grey;
+  }
+}
+
+
+// #lis{
+//     flex-direction:column-reverse;
+//          justify-content:flex-start;
+//          padding:0;
+//          padding-top: 20px;
+//          padding-bottom: 20px;
+//          height: 60px;
+//         display:absolute;
+//         align-items:center;
+//         width:100%
+// }

@@ -35,7 +35,9 @@ forget looking after your family is a very important life skill.
 rows={12}
 variant="filled"
 fullWidth
-label="Life Skills">
+label="What did you
+enjoy about working
+on a project?">
         </TextField>
         </Grid>
         <Grid item xs={2}/>

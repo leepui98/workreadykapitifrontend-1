@@ -1,8 +1,10 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./RegisterForm.css"
+import "./RegisterForm.css";
+import Checkbox from '../Disclaimerview/checkbox';
 
 export default class Studentform extends React.Component {
+<<<<<<< HEAD
     constructor(props) {
         super(props);
         this.state = {
@@ -11,6 +13,9 @@ export default class Studentform extends React.Component {
 
     }
 
+=======
+    
+>>>>>>> f06cba59b362202899f57c9808a37d856ce3758e
     render() {
 
         return (
@@ -77,8 +82,28 @@ export default class Studentform extends React.Component {
                         </div>
                     </div>
                     <div className="row">
+<<<<<<< HEAD
                         <div className="col-lg-5 mb-1">
                             <label>Industry:</label>
+=======
+                        <div className="col-lg-5 mb-4 form-floating">
+                            <div className="control-group form-group">
+                                <div className="controls">
+                                    <label>Industry:</label>
+                                    <select id="Project_industry" name="industry" className="form-control" required
+                                            onChange={event => {
+                                                this.setState({project_industry: event.target.value})
+                                            }}>
+                                        <option disabled selected value="-1">-- Select Industry-</option>
+                                        <option value="banking">Banking</option>
+                                        <option value="healthcare"> Heath Care</option>
+                                        <option value="education"> Education</option>
+                                        <option value="telecom">Telecommunication</option>
+                                        <option value="retail">Retail</option>
+                                    </select>
+                                <span id="Project_industry_msg"/>
+                            </div>
+>>>>>>> f06cba59b362202899f57c9808a37d856ce3758e
                         </div>
                         <div id="ind_select_inputs">
                            
@@ -96,9 +121,22 @@ export default class Studentform extends React.Component {
                             <span id="Project_industry_msg" />
                         
                     </div>
+<<<<<<< HEAD
                 </div >
             </div >
             
+=======
+
+                    </div>
+                                <div className="row">
+                        <div className="col-lg-7 mb-1">
+                            <Checkbox />
+                            <span id="disclaimer_msg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+>>>>>>> f06cba59b362202899f57c9808a37d856ce3758e
         )
     }
 }

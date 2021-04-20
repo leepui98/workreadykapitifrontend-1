@@ -12,21 +12,25 @@ import Page10 from './Page11/Page11';
 import Page11 from './Page12/Page12';
 import Page12 from './Page13/Page13';
 import Page13 from './Page14/Page14';
+import Page14 from './Page15/Page15';
+import Page15 from './Page16/Page16';
 
 
 const WorkReadyPassportHandler = () => {
 
     const [step, setStep] = useState(1); //step will be used for switch cases between each conponentised page of the WRKP.
+    const [stepper, setStepper] = useState(0); //stepper will be a visual stepping module
 
     //Increase step by 1 to go to next page/switch case
     function goForward(nextMove) {
         setStep(nextMove => nextMove + 1)
+        setStepper(nextMove => nextMove + 1)
     }
 
     //Decrease step by 1 to go to previous page,switch case
     function goBackward(nextMove) {
         setStep(nextMove => nextMove - 1)
-
+        setStepper(nextMove => nextMove - 1)
     }
         // Switch case for displaying each page, which takes in step value as a parameter to cycle between pages.
         switch (step) {
@@ -146,7 +150,23 @@ const WorkReadyPassportHandler = () => {
                     goBackward={goBackward}
 
                 />)
-                
+
+            case 14:
+                return (
+                    <Page14
+                    step={step}
+                    goForward={goForward}
+                    goBackward={goBackward}
+
+                />)
+            case 15:
+                return (
+                    <Page15
+                    step={step}
+                    goForward={goForward}
+                    goBackward={goBackward}
+
+                />)
 
         }
     }
