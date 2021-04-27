@@ -36,7 +36,8 @@ div{
 
 }
 #ind_select_inputs{
-  
+    margin-right: 10;
+ 
     text-align: left;
     text-transform: uppercase;
     font-size: 16px;
@@ -44,6 +45,12 @@ div{
     padding-left: 20px;
     color: black;
     font-weight: bold; 
+    display: flex;
+    justify-content: space-between;
+    
+    
+
+  
    }
 #ind_input{
    
@@ -51,10 +58,20 @@ div{
     color: black;
       display: flex;
   }
-   #ind_check{
+   #check-input{
     display: flex;
-    justify-content: space-around;
-  } 
+    justify-content: space-evenly;
+    
+  }
+   #inddiv{
+    display: flex;
+    justify-content: space-between;
+}
+#ind_check{
+    display: flex;
+    overflow-wrap:anywhere;
+    
+}
 
 .ind_ch{
     width: 30px;

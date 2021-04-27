@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import axios from "../../Axios"
 import { NavLink } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 import './Login.css';
 import { LOGIN_USER } from '../../GraphQL/Mutation';
-import { useMutation, useQuery } from "@apollo/client"
-import { AUTH_TOKEN } from "../../constants"
+import { useMutation } from "@apollo/client"
+
 
 
 export default Login;
