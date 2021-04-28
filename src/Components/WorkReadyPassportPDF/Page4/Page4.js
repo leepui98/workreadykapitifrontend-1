@@ -7,14 +7,6 @@ import CornerLogo from '../../../images/Corner-logo.png';
 
 const Page4 = ( props ) => {
 
-    const goForward = (e) => {
-        props.goForward(e.target.value);
-    }
-
-    const goBackward = (e) => {
-        props.goBackward(e.target.value);
-    }
-
 return (
     <body>
     <div>
@@ -43,14 +35,15 @@ curriculum useful as you consider your ideas about this.
 rows={12}
 variant="outlined"
 fullWidth
+onChange={props.handleChange} name={'personalWellness'} defaultValue={props.userInformation.personalWellness}
 >
         </TextField>
         </div>
         </Grid>
         </Grid>
         <br/>
-        <Button className= "Button" onClick={goBackward}>Previous Step</Button>
-    <Button className= "Button" onClick={goForward}>Next Step</Button>
+        <Button className= "Button" onClick={props.goBackward}>Previous Step</Button>
+    <Button className= "Button" onClick={props.goForward}>Next Step</Button>
     </div>
     </body>
 )

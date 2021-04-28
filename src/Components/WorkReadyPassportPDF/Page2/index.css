@@ -49,3 +49,7 @@ p {
       display:flex;
       flex-direction:row;
   }
+  .profile-button-route {
+      color: orange;
+      font-size:15px;
+  }

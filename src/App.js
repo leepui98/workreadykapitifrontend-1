@@ -1,4 +1,3 @@
-
 import './App.css';
 import LoginPage from './Components/Login/login';
 import {Route, Redirect, Switch, BrowserRouter as Router} from 'react-router-dom';
@@ -22,7 +21,7 @@ function App() {
                  <Route path="/forgpass" component={ForgetPass}/>
                  <Route path="/LoginPage" component={LoginPage}/>
                  <Route path="/profile" component={ProfilePage} />
-                 <Route path="/kapitiworkreadypassport" component={WorkReadyPassportHandler} />
+                 <Route path="/kapitiworkreadypassport" component={WorkReadyPassportHandler}/>
                  <Redirect to="/home"/> 
                  </Switch>
              </main>

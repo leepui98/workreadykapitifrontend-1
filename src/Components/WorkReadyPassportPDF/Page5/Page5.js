@@ -36,9 +36,10 @@ forget looking after your family is a very important life skill.
 
         </p>
         <br/>
-        <h3 className='personal-wellness-title'>What did you enjoy about working on a project?</h3>
+        <h3 className='life-skills-title'>What did you enjoy about working on a project?</h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'lifeSkills'} defaultValue={props.userInformation.lifeSkills}
         multiline 
 rows={12}
 variant="outlined"

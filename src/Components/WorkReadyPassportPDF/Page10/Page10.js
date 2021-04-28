@@ -37,6 +37,7 @@ to attach your
 references. </h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'workExperience'} defaultValue={props.userInformation.workExperiences}
         multiline 
 rows={12}
 variant="outlined"

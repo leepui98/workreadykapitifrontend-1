@@ -29,9 +29,10 @@ return (
         Health and Safety is paramount in all workplaces. The panel will be interested in your understanding of health and safety issues, whether you have a current first aid certificate or other training and education that you have related to health and safety. Health and Safety processes are provided in a variety of ways e.g work place induction, evacuation training, site signs, records, etc. Provide details and evidence of the ways in which you have been involved with these processes Use the space below to organise your thoughts.
         </p>
         <br/>
-        <h3 className='personal-wellness-title'>How would you explain health and safety to an employee?</h3>
+        <h3 className='health-and-safety-title'>How would you explain health and safety to an employee?</h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'healthAndSafety'} defaultValue={props.userInformation.healthAndSafety}
         multiline 
 rows={12}
 variant="outlined"

@@ -38,6 +38,7 @@ contribute to buying
 your first home?</h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'moneyManagement'} defaultValue={props.userInformation.moneyManagement}
         multiline 
 rows={12}
 variant="outlined"

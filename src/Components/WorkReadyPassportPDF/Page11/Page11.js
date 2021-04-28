@@ -32,11 +32,12 @@ participation in the arts, kapa haka, work place or peer-support which you
 have been involved with in the last two years.
         </p>
         <br/>
-        <h3 className='personal-wellness-title'>How have you
+        <h3 className='teamwork-title'>How have you
 used teamwork to
 achieve a goal? </h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'teamWork'} defaultValue={props.userInformation.teamWork}
         multiline 
 rows={12}
 variant="outlined"

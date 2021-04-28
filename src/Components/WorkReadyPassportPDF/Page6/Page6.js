@@ -36,12 +36,13 @@ what would they say?
 
         </p>
         <br/>
-        <h3 className='personal-wellness-title'>How would
+        <h3 className='communication-title'>How would
 you communicate in
 a workplace to
 complete a task?</h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'communication'} defaultValue={props.userInformation.communication}
         multiline 
 rows={12}
 variant="outlined"

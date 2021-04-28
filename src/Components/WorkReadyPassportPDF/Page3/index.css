@@ -13,6 +13,7 @@ body {
     padding-left:5%;
     padding-right:5%;
     text-align: center;
+    transition: opacity 1s ease;
 }
 
 h3 {

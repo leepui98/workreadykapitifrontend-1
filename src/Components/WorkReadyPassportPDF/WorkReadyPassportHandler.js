@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, setState } from 'react';
+import { Fade } from '@material-ui/core';
 import Page1 from './Page2/Page2';
 import Page2 from './Page3/Page3';
 import Page3 from './Page4/Page4';
@@ -14,24 +15,57 @@ import Page12 from './Page13/Page13';
 import Page13 from './Page14/Page14';
 import Page14 from './Page15/Page15';
 import Page15 from './Page16/Page16';
-
+import Page16 from './Page17/Page17';
 
 const WorkReadyPassportHandler = () => {
-    
 
     const [step, setStep] = useState(1); //step will be used for switch cases between each conponentised page of the WRKP.
-    const [stepper, setStepper] = useState(0); //stepper will be a visual stepping module
+
+    //user information object held in useState
+    const [userInformation, setUserInformation] = useState({ 
+        profilePicture: null,
+        fullName: '', 
+        phoneNumber: '', 
+        email: '', 
+        employmentGoals: '', 
+        personalWellness: '', 
+        lifeSkills: '', 
+        communication: '',
+        academicAchievements: '',
+        moneyManagement: '',
+        drugFree: '',
+        workExperience: '',
+        teamWork: '',
+        healthAndSafety: '',
+        driversLicense: '',
+        cv:'',
+        characterReferences: '',
+        interviewRegistrationForm: '',
+     });
+
+     const setUploadedImage = (image) => {
+        setUserInformation({
+            profilePicture: image
+        })
+    }
+
+     //handle any change of the props, pass this method as a prop down to each child component page.
+     const handleChange = e => {
+        const { name, value } = e.target;
+        setUserInformation(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
     //Increase step by 1 to go to next page/switch case
     function goForward(nextMove) {
         setStep(nextMove => nextMove + 1)
-        setStepper(nextMove => nextMove + 1)
     }
 
     //Decrease step by 1 to go to previous page,switch case
     function goBackward(nextMove) {
         setStep(nextMove => nextMove - 1)
-        setStepper(nextMove => nextMove - 1)
     }
         // Switch case for displaying each page, which takes in step value as a parameter to cycle between pages.
         switch (step) {
@@ -42,6 +76,9 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
+                    userInformation={userInformation}
+                    handleChange={handleChange}
+                    setUploadedImage={setUploadedImage}
                     />
                 )
                 
@@ -51,14 +88,18 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-
-                    />)
+                    userInformation={userInformation}
+                    handleChange={handleChange}
+                    />
+                    )
             case 3:
                 return (
                     <Page3
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
+                    userInformation={userInformation}
+                    handleChange={handleChange}
         
                     />)
             
@@ -68,6 +109,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
+                    userInformation={userInformation}
+                    handleChange={handleChange}
                 
                     />)
 
@@ -77,7 +120,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                        
+                    userInformation={userInformation}
+                    handleChange={handleChange}
                     />)
 
             case 6:
@@ -86,7 +130,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                                
+                    userInformation={userInformation}
+                    handleChange={handleChange}   
                     />)
 
             case 7:
@@ -95,7 +140,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                                        
+                    userInformation={userInformation}
+                    handleChange={handleChange}         
                     />)
 
             case 8:
@@ -104,7 +150,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                                                
+                    userInformation={userInformation}
+                    handleChange={handleChange}               
                     />)
 
             case 9:
@@ -113,7 +160,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                                                        
+                    userInformation={userInformation}
+                    handleChange={handleChange}                          
                     />)
 
             case 10:
@@ -122,7 +170,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                                                                
+                    userInformation={userInformation}
+                    handleChange={handleChange}                                
                     />)
 
             case 11:
@@ -131,7 +180,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                                                                        
+                    userInformation={userInformation}
+                    handleChange={handleChange}                                        
                     />)
 
             case 12:
@@ -140,7 +190,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-                                                                                
+                    userInformation={userInformation}
+                    handleChange={handleChange}                                                 
                     />)
 
             case 13:
@@ -149,7 +200,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-
+                    userInformation={userInformation}
+                    handleChange={handleChange}
                 />)
 
             case 14:
@@ -158,7 +210,8 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-
+                    userInformation={userInformation}
+                    handleChange={handleChange}
                 />)
             case 15:
                 return (
@@ -166,8 +219,18 @@ const WorkReadyPassportHandler = () => {
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
-
+                    userInformation={userInformation}
+                    handleChange={handleChange}
                 />)
+            
+            case 16:
+                return (
+                    <Page16
+                    step={step}
+                    goBackward={goBackward}
+                    userInformation={userInformation}
+                    handleChange={handleChange}
+               /> )
 
         }
     }

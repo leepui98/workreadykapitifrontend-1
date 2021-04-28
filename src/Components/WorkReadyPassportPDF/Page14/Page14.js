@@ -32,12 +32,13 @@ return (
          employer can match your skills and knowledge to the job vacancy. Use the targeted CV as a guide for you during an interview.
         </p>
         <br/>
-        <h3 className='personal-wellness-title'>Please bring your
+        <h3 className='cv-title'>Please bring your
 TARGETED CV to the
 work ready passport
 interview, or Upload it below. </h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'cv'} defaultValue={props.userInformation.cv}
         multiline 
 rows={12}
 variant="outlined"

@@ -32,10 +32,11 @@ return (
          list the details below. Do you have other NZTA licence endorsements for example forklift or motorbike?
         </p>
         <br/>
-        <h3 className='personal-wellness-title'>Can you confidently
+        <h3 className='driving-title'>Can you confidently
 drive a manual vehicle? </h3>
         <div className="textfield-container">
         <TextField
+            onChange={props.handleChange} name={'driversLicense'} defaultValue={props.userInformation.driversLicense}
         multiline 
 rows={12}
 variant="outlined"

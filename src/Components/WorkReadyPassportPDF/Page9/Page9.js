@@ -30,11 +30,12 @@ return (
 below to prepare your thoughts around the job you are looking for. 
         </p>
         <br/>
-        <h3 className='personal-wellness-title'>Why is it important
+        <h3 className='drug-free-title'>Why is it important
 to be drug free in the
 workplace?</h3>
         <div className="textfield-container">
         <TextField
+        onChange={props.handleChange} name={'drugFree'} defaultValue={props.userInformation.drugFree}
         multiline 
 rows={12}
 variant="outlined"

@@ -25,7 +25,7 @@ const Page16 = ( props ) => {
        <br/>
     </Grid>
         <Grid item xs={12}>
-<h3> Lastly- The Registration Form for Interviews! { /* get full name prop from WorkReadyPassportHandler */}</h3>
+<h3> Lastly - The Registration Form for Interviews. { /* get full name prop from WorkReadyPassportHandler */}</h3>
     <div className='fields-container'>
     <TextField
 fullWidth
@@ -71,9 +71,8 @@ label="Which City?">
     </div>
     </Grid>
     </Grid>
-    <Button className= "Button" onClick={goBackward}>Save and Return to Profile</Button>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
-    <Button className= "Button" onClick={goBackward}>Review your Information</Button>
+    <Button className= "Button" onClick={goForward}>Last Step</Button>
 </div>
 </body>
 )
