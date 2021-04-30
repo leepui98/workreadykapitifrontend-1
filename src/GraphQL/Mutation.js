@@ -1,6 +1,6 @@
-import {gql} from "@apollo/client"
+import { gql } from "@apollo/client"
 
-export const CREATE_USER1 =gql`
+export const CREATE_USER1 = gql`
 mutation createUser($name: String! $userName: String! $password: String! $userStatus: String!){
     createUser(name: $name userName: $userName password: $password userStatus: $userStatus){
         id
@@ -10,7 +10,7 @@ mutation createUser($name: String! $userName: String! $password: String! $userSt
 }
 `
 
-export const UPDATE_PASSWORD =gql`
+export const UPDATE_PASSWORD = gql`
 mutation updatePass($userName: String! $oldPassword: String! $newPassword: String!){
     updatePass(userName: $userName oldPassword: $oldPassword newPassword: $newPassword){
        message
@@ -18,14 +18,14 @@ mutation updatePass($userName: String! $oldPassword: String! $newPassword: Strin
 }
 `
 
-export const DELETE_USER =gql`
+export const DELETE_USER = gql`
 mutation deleteUser($id: ID!){
     deleteUser(id: $id){
        message
     }
 }
 `
-export const LOGIN_USER =gql`
+export const LOGIN_USER = gql`
 mutation loginUser($userName: String! $password: String!){
     loginUser(userName: $userName password: $password){
         successful,
@@ -38,10 +38,37 @@ mutation loginUser($userName: String! $password: String!){
     }
 }
 `
-export const CREATE_USER =gql`
+export const CREATE_USER = gql`
 
-mutation createstuser($fname: String! $lname: String! $oname: String! $userName: String! $password: String! $userStatus: String! $dateOfBirth: String! $school: String! $phone: String! $semail: String! $pemail: String! $industry: String!){
-    createstuser(fname: $fname lname: $lname oname: $oname userName: $userName password: $password userStatus: $userStatus dateOfBirth: $dateOfBirth school: $school phone: $phone semail: $semail pemail: $pemail industry: $industry ){
+mutation createstuser(
+    $first_name: String! 
+    $last_name: String! 
+    $oname: String 
+    $user_name: String! 
+    $pass: String! 
+    $reg_status: String! 
+    $date_of_birth: String! 
+    $school_name: String! 
+    $phone_number: String! 
+    $school_email: String! 
+    $p_email: String! 
+    $industry: String){
+        
+    createstuser(
+    fname: $first_name 
+    lname: $last_name 
+    oname: $oname 
+    userName: $user_name 
+    password: $pass 
+    userStatus: $reg_status 
+    dateOfBirth: $date_of_birth 
+    school: $school_name 
+    phone: $phone_number 
+    semail: $school_email 
+    pemail: $p_email 
+    industry: $industry 
+    cvpath: $reg_status
+    photopath: $reg_status){
         successful,
         message
        

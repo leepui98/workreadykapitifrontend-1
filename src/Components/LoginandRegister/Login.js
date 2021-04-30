@@ -14,7 +14,7 @@ Login.propTypes = {
     setToken: PropTypes.func.isRequired
 }
 
-function Login({ setToken, serverURI }) {
+function Login({ setToken}) {
 
     const history = useHistory();
     const [username, setUsername] = React.useState('');
