@@ -4,17 +4,27 @@ import "./RegisterForm.css";
 import Checkbox from '../Disclaimerview/checkbox';
 
 export default class Studentform extends React.Component {
-    sendData = () => {
-        this.props.dataTransferFtn({ school_name: document.getElementById("school_name").value, date_of_birth: document.getElementById("date_of_birth").value, school_name: document.getElementById("school_name").value, date_of_birth: document.getElementById("date_of_birth").value });
-    }
+
     constructor(props) {
         super(props);
         this.state = {
-            date_of_birth: "", school_name: "my school", ph_number: "", school_email: "", email: "", industry: [],
+            retail: false, construction: false, logistics: false, hospitality: false
         };
 
     }
-
+    sendData = () => {
+        this.props.dataTransferFtn({
+            school_name: document.getElementById("school_name").value,
+            date_of_birth: document.getElementById("date_of_birth").value,
+            phone_number: document.getElementById("phone_number").value,
+            school_email: document.getElementById("school_email").value,
+            p_email: document.getElementById("p_email").value,
+            ch_retail: this.state.retail,
+            ch_construction: this.state.construction,
+            ch_hospitality: this.state.hospitality,
+            ch_logistics: this.state.logistics,
+        });
+    }
     render() {
 
         return (
@@ -89,17 +99,18 @@ export default class Studentform extends React.Component {
                                 </div>
 
                                 <div className="col-7 flex-nowrap" id="ind_select_inputs">
-<div class="p-2 border"  id="ind_check">
-                                     <input id="input-checkbox" type="checkbox" value="ind1" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_retail" />Retail
-                                    
-                                    </div><div class="p-2 border">
-                                    <label id="ind_check"> <input type="checkbox" value="ind2" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_construction" /> construction
-                                    </label></div><div class="p-2 border">
+                                    <div class="p-2 border" id="ind_check">
+                                        <input type="checkbox" onChange={(event => { this.setState({ retail: !this.state.retail }, () => { this.sendData() }) })} name="ind_retail" />Retail
 
-                                    <label id="ind_check"> <input type="checkbox" value="ind3" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_logistics" /> logistics
-                                    </label></div><div class="p-2 border">
-                                    <label id="ind_check"> <input type="checkbox" value="ind4" onChange={event => { this.setState({ reg_status: event.target.value }) }} name="ind_hospitality" /> hospitality
-                                    </label></div>
+                                    </div><div class="p-2 border">
+                                        <label id="ind_check"> <input id="ch-construction" type="checkbox" value="ind2" onChange={(event => { this.setState({ construction: !this.state.construction }, () => { this.sendData() }) })} name="ind_construction" /> construction
+                                        </label></div><div class="p-2 border">
+
+                                        <label id="ind_check"> <input id="ch-logistics" type="checkbox" value="ind3" onChange={(event => { this.setState({ logistics: !this.state.logistics }, () => { this.sendData() }) })} name="ind_logistics" /> logistics
+                                        </label></div><div class="p-2 border">
+                                        <label id="ind_check"> <input id="ch-hospitality" type="checkbox" value="ind4" onChange={(event => { this.setState({ hospitality: !this.state.hospitality }, () => { this.sendData() }) })} name="ind_hospitality" /> hospitality
+                                        </label></div>
+
                                 </div>
                             </div>
                             <span id="Project_industry_msg" />

@@ -26,8 +26,7 @@ function Login({ setToken, serverURI }) {
         onCompleted: (login) => {
             console.log(login.loginUser.message)
             localStorage.setItem('login-token', 'success');
-  
-            window.location.reload();
+              window.location.reload();
         }
     });
 
