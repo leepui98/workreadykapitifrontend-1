@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   
   //employers
   const employerRows = [
-      createEmployer('1', 'Bob the builder', '027-CANWEFIXIT', 'bob@building.com', '03/05/21 at 2:15pm', '4/05/21 at 2:15pm', 'Bob was on holiday for two week in Auckland with his wife. Wants students who are interested in building apprenticeships.'),
+      createEmployer('1', 'Bob the builder', '027-CANWEFIXIT', 'bob@building.com', '03/05/21 at 2:15pm', '4/05/21 at 2:15pm', 'Bob was on holiday for two week in Auckland buying a new digger. Wants students who are interested in building apprenticeships.'),
   ];
   
 

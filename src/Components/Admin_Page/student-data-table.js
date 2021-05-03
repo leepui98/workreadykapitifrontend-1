@@ -1,4 +1,3 @@
-import { Grid } from '@material-ui/core';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -16,20 +15,20 @@ const useStyles = makeStyles({
     },
   });
   
-  
   function createStudent(id, name, phoneNumber, email, dateCreated, lastContact, contactNotes) {
     return {id, name, phoneNumber, email, dateCreated, lastContact, contactNotes};
   }
   
+  
   //students
   const studentRows = [
-    createStudent('1', 'Max Spijkerbosch', '027000000', 'max@gmail.com', '03/05/21 at 11:07am', 'never', 'Max is cool'),
+    createStudent('1', 'Max Spijkerbosch', '027000000', 'max@gmail.com', '03/05/21 at 11:07am', '2 weeks ago', 'Completing passport. Will arrange meeting next time I email/call him.'),
     createStudent('2', 'Raj', '021111111', 'raj@gmail.com', '03/05/21 at 11:39am', 'never', 'No notes'),
-    createStudent('2', 'Martin', '02222222', 'martin@gmail.com', '03/05/21 at 11:45am', 'never', 'No notes'),
-    createStudent('2', 'PuiLi', '021444444', 'PuiLi@gmail.com', '03/05/21 at 11:49am', 'never', 'No notes'),
+    createStudent('3', 'Martin', '02222222', 'martin@gmail.com', '03/05/21 at 11:45am', 'never', 'No notes'),
+    createStudent('4', 'PuiLi', '021444444', 'PuiLi@gmail.com', '03/05/21 at 11:49am', 'never', 'No notes'),
   ];
 
-export default function Buttons() {
+const StudentTable = ( props ) => {
     const classes = useStyles();
 return (
 <TableContainer component={Paper}>
@@ -64,4 +63,6 @@ return (
       </Table>
     </TableContainer>
 );
-          }
+}
+
+export default StudentTable;
