@@ -7,7 +7,7 @@ return (
     <h4>Phone Number:</h4>
     <p>{props.userInformation.phoneNumber}</p>
     <h4>Email:</h4>
-    <p className='break-after'>{props.userInformation.email}</p>
+    <p>{props.userInformation.email}</p>
     <h4>Employment Goals:</h4>
     <p> {props.userInformation.employmentGoals}</p>
     <h4>Personal Wellness:</h4>
