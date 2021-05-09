@@ -1,0 +1,23 @@
+ {
+ "employers" : [
+ {"id":"1","fullName": "Max", "phoneNumber": "0273033554", "email":"spijk@gmail.com", "dateCreated": "03/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "Industry employing"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us. He will get back to us. He will get back to us. He will get back to us. He will get back to us. He will get back to us. He will get back to us.", "tags": "machinery"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "IT"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "programmer"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "programmer"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "programmer"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"},
+ {"id":"2","fullName": "Mike", "phoneNumber": "0281191140", "email":"mike@gmail.com", "dateCreated": "02/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"}
+ ],
+ "students" : [
+    {"id":"1","fullName": "Siiiii", "phoneNumber": "0273033554", "email":"spijk@gmail.com", "dateCreated": "03/05/21", "lastContact": "Today", "contactNotes": "He will get back to us.", "tags": "baker"}
+    ] 
+ }

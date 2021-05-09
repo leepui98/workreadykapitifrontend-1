@@ -1,64 +1,60 @@
-import { Grid } from '@material-ui/core';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
-import { getDefaultNormalizer } from '@testing-library/dom';
+import { RowingSharp } from '@material-ui/icons';
+import React, {useState, useEffect} from 'react';
+import DataTable from './DataTable/index.js';
+import MockData from './mockData.json';
+import { CSVLink, CSVDownload } from "react-csv";
 
-
-const useStyles = makeStyles({
-    table: {
-      minWidth: 650,
-    },
-  });
-  
-  function createEmployer(id, name, phoneNumber, email, dateCreated, lastContact, contactNotes) {
-    return {id, name, phoneNumber, email, dateCreated, lastContact, contactNotes };
-  }
-  
-  //employers
-  const employerRows = [
-      createEmployer('1', 'Bob the builder', '027-CANWEFIXIT', 'bob@building.com', '03/05/21 at 2:15pm', '4/05/21 at 2:15pm', 'Bob was on holiday for two week in Auckland buying a new digger. Wants students who are interested in building apprenticeships.'),
-  ];
-  
+require ("es6-promise").polyfill();
+require("isomorphic-fetch");
 
 export default function EmployerTable() {
-    const classes = useStyles();
+
+const [data, setData] = useState([]);
+const [q, setQ] = useState("");
+const [searchColumns, setSearchColumns] = useState(["fullName", "phoneNumber", "email"])
+
+useEffect(() => { 
+  fetch("http://localhost:3000/employers").then((response) => response.json()).then(json => setData(json)) 
+}, []);
+
+function search(rows) {
+  return rows.filter(
+    (row) => searchColumns.some(
+      (column) => row[column].toString().toLowerCase().indexOf(q) > -1
+    )
+  );
+}
+
+const columns = data[0] && Object.keys(data[0]);
 return (
-<TableContainer component={Paper}>
-      <h1>Employers</h1>
-      <Table className={classes.table} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-          <TableCell>ID</TableCell>
-            <TableCell>Employer Name: </TableCell>
-            <TableCell>Phone Number</TableCell>
-            <TableCell>Email</TableCell>
-            <TableCell>Date Created</TableCell>
-            <TableCell>Last Contacted</TableCell>
-            <TableCell>Contact Notes</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {employerRows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.id}
-              </TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.phoneNumber}</TableCell>
-              <TableCell>{row.email}</TableCell>
-              <TableCell>{row.dateCreated}</TableCell>
-              <TableCell>{row.lastContact}</TableCell>
-              <TableCell>{row.contactNotes}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-);
-          }
+<div>
+    <h1>Employers</h1>
+    <CSVLink data={data}  filename={"WRK-employers.csv"}>Download Employer Data as CSV<br/><br/></CSVLink>
+  <div>
+<input type="text" value={q} width='100%' onChange={(e) => setQ(e.target.value)}/>
+  {
+    columns && columns.map(column => <label>
+      <input type="checkbox" checked={searchColumns.includes(column)}
+      onChange={(e) => { const checked = searchColumns.includes(column)
+      setSearchColumns(prev => checked
+        ? prev.filter(sc => sc !== column)
+        : [...prev, column]
+        
+        )
+      } }
+      />
+      {column}
+    </label>)
+  }
+  </div>
+  <div>
+<DataTable
+data={search(data)}
+/>
+  </div>
+  </div>
+
+)
+
+}
+

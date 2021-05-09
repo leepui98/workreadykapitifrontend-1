@@ -7,12 +7,8 @@ const headerButtons = (props) => {
 return (
 <div className='header'>
 <button className='header-buttons' onClick={() => setPage('main')}>All Contacts</button>
-<button className='header-buttons' onClick={() => setPage('students')}>Student Contacts</button>
-<button className='header-buttons' onClick={() => setPage('employers')}>Employer Contacts</button>
-<button className='header-buttons'>Update Contact</button>
-<button className='header-buttons'>Search Contact</button>
-<button className='header-buttons'>Remove Contact</button>
-<button className='header-buttons'>Add Contact</button>
+<button className='header-buttons' onClick={() => setPage('students')}>Students</button>
+<button className='header-buttons' onClick={() => setPage('employers')}>Employers</button>
 <br/>
 </div>
 );

@@ -1,68 +1,61 @@
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core/styles';
-import { getDefaultNormalizer } from '@testing-library/dom';
+import { RowingSharp } from '@material-ui/icons';
+import React, {useState, useEffect} from 'react';
+import DataTable from './DataTable/index.js';
+import MockData from './mockData.json';
+import { CSVLink, CSVDownload } from "react-csv";
 
+require ("es6-promise").polyfill();
+require("isomorphic-fetch");
 
-const useStyles = makeStyles({
-    table: {
-      minWidth: 650,
-    },
-  });
-  
-  function createStudent(id, name, phoneNumber, email, dateCreated, lastContact, contactNotes) {
-    return {id, name, phoneNumber, email, dateCreated, lastContact, contactNotes};
-  }
-  
-  
-  //students
-  const studentRows = [
-    createStudent('1', 'Max Spijkerbosch', '027000000', 'max@gmail.com', '03/05/21 at 11:07am', '2 weeks ago', 'Completing passport. Will arrange meeting next time I email/call him.'),
-    createStudent('2', 'Raj', '021111111', 'raj@gmail.com', '03/05/21 at 11:39am', 'never', 'No notes'),
-    createStudent('3', 'Martin', '02222222', 'martin@gmail.com', '03/05/21 at 11:45am', 'never', 'No notes'),
-    createStudent('4', 'PuiLi', '021444444', 'PuiLi@gmail.com', '03/05/21 at 11:49am', 'never', 'No notes'),
-  ];
+export default function StudentTable() {
 
-const StudentTable = ( props ) => {
-    const classes = useStyles();
-return (
-<TableContainer component={Paper}>
-         <h1>Students</h1>
-      <Table className={classes.table} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-          <TableCell>ID: </TableCell>
-            <TableCell>Student Name: </TableCell>
-            <TableCell>Phone Number</TableCell>
-            <TableCell>Email</TableCell>
-            <TableCell>Date Created</TableCell>
-            <TableCell>Last Contacted</TableCell>
-            <TableCell>Contact Notes</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {studentRows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.id}
-              </TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.phoneNumber}</TableCell>
-              <TableCell>{row.email}</TableCell>
-              <TableCell>{row.dateCreated}</TableCell>
-              <TableCell>{row.lastContact}</TableCell>
-              <TableCell>{row.contactNotes}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-);
+const [data, setData] = useState([]);
+const [q, setQ] = useState("");
+const [searchColumns, setSearchColumns] = useState(["fullName", "phoneNumber", "email"])
+
+useEffect(() => { 
+  fetch("http://localhost:3000/students").then((response) => response.json()).then(json => setData(json)) 
+}, []);
+
+function search(rows) {
+  return rows.filter(
+    (row) => searchColumns.some(
+      (column) => row[column].toString().toLowerCase().indexOf(q) > -1
+    )
+  );
 }
 
-export default StudentTable;
+const columns = data[0] && Object.keys(data[0]);
+return (
+<div>
+    <h1>Students</h1>
+    <CSVLink data={data}  filename={"WRK-students.csv"}>Download Student 
+    Data as CSV<br/><br/></CSVLink>
+  <div>
+<input type="text" value={q} width='100%' onChange={(e) => setQ(e.target.value)}/>
+  {
+    columns && columns.map(column => <label>
+      <input type="checkbox" checked={searchColumns.includes(column)}
+      onChange={(e) => { const checked = searchColumns.includes(column)
+      setSearchColumns(prev => checked
+        ? prev.filter(sc => sc !== column)
+        : [...prev, column]
+        
+        )
+      } }
+      />
+      {column}
+    </label>)
+  }
+  </div>
+  <div>
+<DataTable
+data={search(data)}
+/>
+  </div>
+  </div>
+
+)
+
+}
+
