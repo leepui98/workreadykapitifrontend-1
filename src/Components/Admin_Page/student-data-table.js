@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import DataTable from './DataTable/index.js';
 import MockData from './mockData.json';
 import { CSVLink, CSVDownload } from "react-csv";
+import './admin.css';
 
 require ("es6-promise").polyfill();
 require("isomorphic-fetch");
@@ -32,9 +33,9 @@ return (
     <CSVLink data={data}  filename={"WRK-students.csv"}>Download Student 
     Data as CSV<br/><br/></CSVLink>
   <div>
-<input type="text" value={q} width='100%' onChange={(e) => setQ(e.target.value)}/>
+<input type="text" value={q} width='100%' placeholder="Enter Search Term" onChange={(e) => setQ(e.target.value)}/>
   {
-    columns && columns.map(column => <label>
+    columns && columns.map(column => <label id="filters">
       <input type="checkbox" checked={searchColumns.includes(column)}
       onChange={(e) => { const checked = searchColumns.includes(column)
       setSearchColumns(prev => checked
@@ -50,6 +51,7 @@ return (
   </div>
   <div>
 <DataTable
+className='student-table'
 data={search(data)}
 />
   </div>

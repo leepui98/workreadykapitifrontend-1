@@ -3,20 +3,23 @@ import React, {useState, useEffect} from 'react';
 import DataTable from './DataTable/index.js';
 import MockData from './mockData.json';
 import { CSVLink, CSVDownload } from "react-csv";
+import './admin.css';
 
 require ("es6-promise").polyfill();
 require("isomorphic-fetch");
 
 export default function EmployerTable() {
 
-const [data, setData] = useState([]);
-const [q, setQ] = useState("");
-const [searchColumns, setSearchColumns] = useState(["fullName", "phoneNumber", "email"])
+const [data, setData] = useState([]); //json data
+const [q, setQ] = useState(""); //query
+const [searchColumns, setSearchColumns] = useState(["fullName", "phoneNumber", "email"]) //for the checkbox filters
 
+// fetch json data and set the data in our data array
 useEffect(() => { 
   fetch("http://localhost:3000/employers").then((response) => response.json()).then(json => setData(json)) 
-}, []);
+  }, []);
 
+// function to search through json data (rows)
 function search(rows) {
   return rows.filter(
     (row) => searchColumns.some(
@@ -31,9 +34,9 @@ return (
     <h1>Employers</h1>
     <CSVLink data={data}  filename={"WRK-employers.csv"}>Download Employer Data as CSV<br/><br/></CSVLink>
   <div>
-<input type="text" value={q} width='100%' onChange={(e) => setQ(e.target.value)}/>
+<input type="text" value={q} width='100%' placeholder="Enter Search Term" onChange={(e) => setQ(e.target.value)}/>
   {
-    columns && columns.map(column => <label>
+    columns && columns.map(column => <label id="filters">
       <input type="checkbox" checked={searchColumns.includes(column)}
       onChange={(e) => { const checked = searchColumns.includes(column)
       setSearchColumns(prev => checked
