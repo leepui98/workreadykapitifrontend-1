@@ -19,9 +19,12 @@ const useStyles = makeStyles({
           width: '100%',
         },
         container: {
-          maxHeight: 250,
+          maxHeight: 600,
+          minHeight: 600
         },
       });
+
+const classes = useStyles();
 
 //change page in table
 const handleChangePage = (event, newPage) => {
@@ -34,26 +37,26 @@ const handleChangeRowsPerPage = (event) => {
     setPage(0);
   };
 
-
 const columns = data[0] && Object.keys(data[0])
 return (
   <div>
-    <Paper className={useStyles.root}>
-    <TableContainer className={useStyles.container}>
-    <Table id='table-container' cellPadding={8} cellSpacing={8}>
+    <Paper className={classes.root}>
+    <TableContainer className={classes.container}>
+    <Table cellPadding={8} cellSpacing={8} stickyHeader>
     <TableHead>
-        <tr>{data[0] && columns.map((heading) => <th>{heading}</th>)}</tr>
+        <TableRow>{data[0] && columns.map((heading) => <TableCell>{heading}</TableCell>)}</TableRow>
     </TableHead>
-    <TableBody contentEditable="true">
-{data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => <tr>
+    <TableBody>
+{data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => <TableRow>
     {
-columns.map(column => <td height="100px">{row[column]}</td>)
+columns.map(column => <TableCell contentEditable='true' height="100px">{row[column]}</TableCell>)
     }
-</tr>)}
+</TableRow>)}
     </TableBody>
     </Table>
-    <TablePagination
-        rowsPerPageOptions={[5, 10, 15]}
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25, 50]}
         component="div"
         count={data.length}
         rowsPerPage={rowsPerPage}
@@ -61,7 +64,6 @@ columns.map(column => <td height="100px">{row[column]}</td>)
         onChangePage={handleChangePage}
         onChangeRowsPerPage={handleChangeRowsPerPage}
       />
-      </TableContainer>
     </Paper>
     </div>
 )

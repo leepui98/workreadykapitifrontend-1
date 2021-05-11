@@ -2,8 +2,7 @@ import Button from "@material-ui/core/Button";
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-import './index.css';
-import CornerLogo from '../../../images/Corner-logo.png';
+import CornerLogo from '../../images/Corner-logo.png';
 
 const Page6 = ( props ) => {
 
@@ -24,18 +23,25 @@ return (
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 6 - Drug Free { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 3 - Communication { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Explain why it is important to be drug free in the work place. Use the space
-below to prepare your thoughts around the job you are looking for. 
+        Communication is simply the act of transferring information from one place to
+another whether verbal, written or visual. Think about how you interact with
+people in conversation. Do you make eye contact with people and do you
+listen when being spoken to? Consider your written skills and the language
+you use, both in writing and when speaking. Devices verse face to face – do
+you prefer to talk or text? If we asked your friends how you communicate
+what would they say?
+
         </p>
         <br/>
-        <h3 className='drug-free-title'>Why is it important
-to be drug free in the
-workplace?</h3>
+        <h3 className='communication-title'>How would
+you communicate in
+a workplace to
+complete a task?</h3>
         <div className="textfield-container">
         <TextField
-        onChange={props.handleChange} name={'drugFree'} defaultValue={props.userInformation.drugFree}
+        onChange={props.handleChange} name={'communication'} defaultValue={props.userInformation.communication}
         multiline 
 rows={12}
 variant="outlined"

@@ -9,6 +9,7 @@
     display:none;
     border-radius:50%;
 }
+
 .upload-picture-button {
     border-style:solid;
     border-color: orange;
@@ -34,4 +35,6 @@ h3 {
     border-style:solid;
     border-width:5px;
 }
-
+.icon-button {
+    color: orange;
+}

@@ -12,7 +12,8 @@ export default function EmployerTable() {
 
 const [data, setData] = useState([]); //json data
 const [q, setQ] = useState(""); //query
-const [searchColumns, setSearchColumns] = useState(["fullName", "phoneNumber", "email"]) //for the checkbox filters
+const [searchColumns, setSearchColumns] = useState(["Full Name"]) //for the checkbox filters
+const [isEditable, setIsEditable] = useState('false');
 
 // fetch json data and set the data in our data array
 useEffect(() => { 
@@ -33,7 +34,9 @@ return (
 <div>
     <h1>Employers</h1>
     <CSVLink data={data}  filename={"WRK-employers.csv"}>Download Employer Data as CSV<br/><br/></CSVLink>
+    <button>Add Employer</button>
   <div>
+    <br/>
 <input type="text" value={q} width='100%' placeholder="Enter Search Term" onChange={(e) => setQ(e.target.value)}/>
   {
     columns && columns.map(column => <label id="filters">
@@ -42,7 +45,6 @@ return (
       setSearchColumns(prev => checked
         ? prev.filter(sc => sc !== column)
         : [...prev, column]
-        
         )
       } }
       />

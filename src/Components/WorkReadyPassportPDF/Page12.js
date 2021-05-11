@@ -2,8 +2,7 @@ import Button from "@material-ui/core/Button";
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-import './index.css';
-import CornerLogo from '../../../images/Corner-logo.png';
+import CornerLogo from '../../images/Corner-logo.png';
 
 const Page11 = ( props ) => {
 
@@ -24,20 +23,15 @@ return (
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 8 - Ability to Work as Part of a Team { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 9 - Ability to Understand Health and Safety at Work { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        The ability to work as part of a team and communicate in a team environment
-is important. List here activities such as sport, volunteer work in the community,
-participation in the arts, kapa haka, work place or peer-support which you
-have been involved with in the last two years.
+        Health and Safety is paramount in all workplaces. The panel will be interested in your understanding of health and safety issues, whether you have a current first aid certificate or other training and education that you have related to health and safety. Health and Safety processes are provided in a variety of ways e.g work place induction, evacuation training, site signs, records, etc. Provide details and evidence of the ways in which you have been involved with these processes Use the space below to organise your thoughts.
         </p>
         <br/>
-        <h3 className='teamwork-title'>How have you
-used teamwork to
-achieve a goal? </h3>
+        <h3 className='health-and-safety-title'>How would you explain health and safety to an employee?</h3>
         <div className="textfield-container">
         <TextField
-        onChange={props.handleChange} name={'teamWork'} defaultValue={props.userInformation.teamWork}
+        onChange={props.handleChange} name={'healthAndSafety'} defaultValue={props.userInformation.healthAndSafety}
         multiline 
 rows={12}
 variant="outlined"

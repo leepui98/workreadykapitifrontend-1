@@ -1,24 +1,23 @@
 import React from 'react';
-import ImageUploader from '../../Profile_Picture/PictureUploader';
+import ImageUploader from '../Profile_Picture/PictureUploader';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-import './index.css';
 import Button from "@material-ui/core/Button";
-import CornerLogo from '../../../images/Corner-logo.png';
+import CornerLogo from '../../images/Corner-logo.png';
 import {BrowserRouter as Router, Switch,Route, Link} from "react-router-dom";
 
 const Page2 = ( props ) => {
 
 
 return (
-    <body>
-<Grid container spacing={2} className='grid-container'>
+    <div>
+<Grid container spacing={2}>
     <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
     </Grid>
     <Grid item xs={12}>
         <br/>
-        <h3>Welcome to Your Digitized Kapiti Work Ready Passport</h3>
+        <h2>Welcome to Your Digitized Kapiti Work Ready Passport</h2>
         <br/>
 <ImageUploader 
 handleChange={props.handleChange}
@@ -50,13 +49,13 @@ by completing the Passport Workbook you will develop the knowledge and skills th
 are required by employers and illustrate that you have the work ethic and attitude which
 makes you “work ready”.
 We wish you the very best in your endeavours to obtain work.</p>
-<p className="foreword">Foreword by Bryan Gundersen, Chair of the Kāpiti Youth Employment Foundation (commonly referred to as Work Ready Kāpiti)</p>
+<p>Foreword by Bryan Gundersen, Chair of the Kāpiti Youth Employment Foundation (commonly referred to as Work Ready Kāpiti)</p>
 </div>
 </Grid>
-<Button component={Link} to="/profile" className='profile-button-route'><br/>Back to your profile</Button>
-<Button onClick={props.goForward}><br/>Next Step</Button>
+<Button id='nav-buttons' component={Link} to="/profile"><br/>Back to your profile</Button>
+<Button id='nav-buttons' onClick={props.goForward}><br/>Next Step</Button>
 </Grid>
-</body>
+</div>
 )
 }
 export default Page2;

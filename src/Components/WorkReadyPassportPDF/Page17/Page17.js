@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import * as React from 'react';
 import { Grid } from '@material-ui/core';
-import './index.css';
+import './page17.css';
 import CornerLogo from '../../../images/Corner-logo.png';
 import html2pdf from 'html2pdf.js';
 import UserDetails from "./UserDetails";

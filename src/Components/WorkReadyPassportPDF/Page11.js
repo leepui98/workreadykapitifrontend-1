@@ -2,10 +2,9 @@ import Button from "@material-ui/core/Button";
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-import './index.css';
-import CornerLogo from '../../../images/Corner-logo.png';
+import CornerLogo from '../../images/Corner-logo.png';
 
-const Page6 = ( props ) => {
+const Page11 = ( props ) => {
 
     const goForward = (e) => {
         props.goForward(e.target.value);
@@ -24,25 +23,20 @@ return (
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 3 - Communication { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h3> Step 8 - Ability to Work as Part of a Team { /* get full name prop from WorkReadyPassportHandler */}</h3>
         <p>
-        Communication is simply the act of transferring information from one place to
-another whether verbal, written or visual. Think about how you interact with
-people in conversation. Do you make eye contact with people and do you
-listen when being spoken to? Consider your written skills and the language
-you use, both in writing and when speaking. Devices verse face to face – do
-you prefer to talk or text? If we asked your friends how you communicate
-what would they say?
-
+        The ability to work as part of a team and communicate in a team environment
+is important. List here activities such as sport, volunteer work in the community,
+participation in the arts, kapa haka, work place or peer-support which you
+have been involved with in the last two years.
         </p>
         <br/>
-        <h3 className='communication-title'>How would
-you communicate in
-a workplace to
-complete a task?</h3>
+        <h3 className='teamwork-title'>How have you
+used teamwork to
+achieve a goal? </h3>
         <div className="textfield-container">
         <TextField
-        onChange={props.handleChange} name={'communication'} defaultValue={props.userInformation.communication}
+        onChange={props.handleChange} name={'teamWork'} defaultValue={props.userInformation.teamWork}
         multiline 
 rows={12}
 variant="outlined"
@@ -60,4 +54,4 @@ fullWidth
 )
 
 }
-export default Page6;
+export default Page11;

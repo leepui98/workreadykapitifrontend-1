@@ -1,6 +1,5 @@
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import React, {useState} from 'react';
-import './passportview.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';

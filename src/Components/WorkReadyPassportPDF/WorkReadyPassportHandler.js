@@ -1,20 +1,20 @@
 import React, { useState, setState } from 'react';
 import { Fade } from '@material-ui/core';
-import Page1 from './Page2/Page2';
-import Page2 from './Page3/Page3';
-import Page3 from './Page4/Page4';
-import Page4 from './Page5/Page5';
-import Page5 from './Page6/Page6';
-import Page6 from './Page7/Page7';
-import Page7 from './Page8/Page8';
-import Page8 from './Page9/Page9';
-import Page9 from './Page10/Page10';
-import Page10 from './Page11/Page11';
-import Page11 from './Page12/Page12';
-import Page12 from './Page13/Page13';
-import Page13 from './Page14/Page14';
-import Page14 from './Page15/Page15';
-import Page15 from './Page16/Page16';
+import Page1 from './Page2';
+import Page2 from './Page3';
+import Page3 from './Page4';
+import Page4 from './Page5';
+import Page5 from './Page6';
+import Page6 from './Page7';
+import Page7 from './Page8';
+import Page8 from './Page9';
+import Page9 from './Page10';
+import Page10 from './Page11';
+import Page11 from './Page12';
+import Page12 from './Page13';
+import Page13 from './Page14';
+import Page14 from './Page15';
+import Page15 from './Page16';
 import Page16 from './Page17/Page17';
 
 const WorkReadyPassportHandler = () => {

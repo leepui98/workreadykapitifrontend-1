@@ -2,8 +2,7 @@ import Button from "@material-ui/core/Button";
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-import './index.css';
-import CornerLogo from '../../../images/Corner-logo.png';
+import CornerLogo from '../../images/Corner-logo.png';
 
 const Page4 = ( props ) => {
 

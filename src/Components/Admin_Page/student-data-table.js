@@ -12,7 +12,7 @@ export default function StudentTable() {
 
 const [data, setData] = useState([]);
 const [q, setQ] = useState("");
-const [searchColumns, setSearchColumns] = useState(["fullName", "phoneNumber", "email"])
+const [searchColumns, setSearchColumns] = useState(["Full Name"])
 
 useEffect(() => { 
   fetch("http://localhost:3000/students").then((response) => response.json()).then(json => setData(json)) 
@@ -32,7 +32,9 @@ return (
     <h1>Students</h1>
     <CSVLink data={data}  filename={"WRK-students.csv"}>Download Student 
     Data as CSV<br/><br/></CSVLink>
+    <button>Add Student</button>
   <div>
+    <br/>
 <input type="text" value={q} width='100%' placeholder="Enter Search Term" onChange={(e) => setQ(e.target.value)}/>
   {
     columns && columns.map(column => <label id="filters">

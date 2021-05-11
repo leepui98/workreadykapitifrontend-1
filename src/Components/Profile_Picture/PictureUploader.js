@@ -47,7 +47,7 @@ const PictureUploader = () => {
                 />
                 <br></br>
                 <label for="img">
-                <IconButton color="primary" aria-label="upload picture" component="span">
+                <IconButton id='icon-button' color="primary" aria-label="upload picture" component="span">
           <PhotoCamera/>
         </IconButton>
         </label>

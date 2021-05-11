@@ -1,9 +1,8 @@
 import Button from "@material-ui/core/Button";
 import * as React from 'react';
 import { Grid } from '@material-ui/core';
-import './index.css';
 import TextField from '@material-ui/core/TextField';
-import CornerLogo from '../../../images/Corner-logo.png';
+import CornerLogo from '../../images/Corner-logo.png';
 
 const Page15 = ( props ) => {
 
