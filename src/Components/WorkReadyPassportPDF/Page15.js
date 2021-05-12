@@ -15,15 +15,17 @@ const Page15 = ( props ) => {
     }
 
     return (
-        <body>
     <div>
-    <Grid container spacing={2}>
     <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
         <Grid item xs={12}>
-<h3> Step 12 - Character References { /* get full name prop from WorkReadyPassportHandler */}</h3>
+<h2>        <br/> Step 12 - Character References { /* get full name prop from WorkReadyPassportHandler */}</h2>
+<br/>
+<h3>Please bring your
+REFERENCES to the
+mock interview</h3>
     <p>
     Please include a copy of your REFERENCES.
 Ask someone you have worked for or a teacher or coach who knows you
@@ -44,7 +46,7 @@ label="Full Name">
 fullWidth
 label="Contact Information">
     </TextField>
-    <h3> Reference #2</h3>
+    <h3><br/> Reference #2</h3>
     <TextField
 fullWidth
 label="Full Name">
@@ -53,7 +55,7 @@ label="Full Name">
 fullWidth
 label="Contact Information">
     </TextField>
-    <h3> Reference #3</h3>
+    <h3><br/> Reference #3</h3>
     <TextField
 fullWidth
 label="Full Name">
@@ -66,12 +68,10 @@ label="Contact Information">
     <br/>
     </div>
     </Grid>
-    </Grid>
     <br/>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
 <Button className= "Button" onClick={goForward}>Next Step</Button>
 </div>
-</body>
 )
 
 }

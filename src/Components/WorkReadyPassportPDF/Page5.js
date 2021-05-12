@@ -15,15 +15,13 @@ const Page5 = ( props ) => {
     }
 
 return (
-    <body>
     <div>
-        <Grid container spacing={2}>
         <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 2 - Life Skills { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h2>        <br/> Step 2 - Life Skills { /* get full name prop from WorkReadyPassportHandler */}</h2>
         <p>
         The ability to cope with stresses and challenges of daily life, using skills such
 as communication, literacy, decision-making, occupational requirements,
@@ -46,13 +44,22 @@ fullWidth
 >
         </TextField>
         </div>
+        <br/>
         </Grid>
+        <Grid item xs={12} className='handy-hints'>
+<h6 className='handy-hints-heading'>Handy Hints
+</h6>
+<p className='handy-hints-desc'>
+Working in a community.
+Think about values and other peoples’ perspectives.
+How have you balanced family responsibilities. 
+</p>
+
         </Grid>
         <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
-    </body>
 )
 
 }

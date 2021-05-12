@@ -11,7 +11,6 @@ const Page2 = ( props ) => {
 
 return (
     <div>
-<Grid container spacing={2}>
     <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
     </Grid>
@@ -54,7 +53,6 @@ We wish you the very best in your endeavours to obtain work.</p>
 </Grid>
 <Button id='nav-buttons' component={Link} to="/profile"><br/>Back to your profile</Button>
 <Button id='nav-buttons' onClick={props.goForward}><br/>Next Step</Button>
-</Grid>
 </div>
 )
 }

@@ -15,15 +15,13 @@ const Page11 = ( props ) => {
     }
 
 return (
-    <body>
     <div>
-        <Grid container spacing={2}>
         <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 9 - Ability to Understand Health and Safety at Work { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h2>         <br/>Step 9 - Understanding Health and Safety at Work { /* get full name prop from WorkReadyPassportHandler */}</h2>
         <p>
         Health and Safety is paramount in all workplaces. The panel will be interested in your understanding of health and safety issues, whether you have a current first aid certificate or other training and education that you have related to health and safety. Health and Safety processes are provided in a variety of ways e.g work place induction, evacuation training, site signs, records, etc. Provide details and evidence of the ways in which you have been involved with these processes Use the space below to organise your thoughts.
         </p>
@@ -39,13 +37,21 @@ fullWidth
 >
         </TextField>
         </div>
+        <br/>
         </Grid>
+        <Grid item xs={12} className='handy-hints'>
+<h6 className='handy-hints-heading'>Handy Hints
+</h6>
+<p className='handy-hints-desc'>
+You could ask an employer about how they manage workplace health and safety in their business.
+What effect would Health and Safety have on the role you are applying for?
+</p>
+
         </Grid>
         <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
-    </body>
 )
 
 }

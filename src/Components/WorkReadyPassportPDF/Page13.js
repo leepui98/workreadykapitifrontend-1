@@ -15,15 +15,13 @@ const Page13 = ( props ) => {
     }
 
 return (
-    <body>
     <div>
-        <Grid container spacing={2}>
         <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 10 - Restricted Drivers License Class 1 Endorsement{ /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h2>        <br/> Step 10 - Restricted Drivers License Class 1 Endorsement{ /* get full name prop from WorkReadyPassportHandler */}</h2>
         <p>
         Many jobs in our area need employees to have a restricted driver’s licence and manual driving experience.
          If there is a legitimate reason why you cannot progress your driver’s license please note that here, reasons 
@@ -43,13 +41,21 @@ fullWidth
 >
         </TextField>
         </div>
+        <br/>
         </Grid>
+        <Grid item xs={12} className='handy-hints'>
+<h6 className='handy-hints-heading'>Handy Hints
+</h6>
+<p className='handy-hints-desc'>
+You can apply for your restricted licence once you have mastered the driving skills you will need to pass the
+restricted licence test. 
+</p>
+
         </Grid>
         <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
-    </body>
 )
 
 }

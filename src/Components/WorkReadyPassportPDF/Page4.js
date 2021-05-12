@@ -7,15 +7,13 @@ import CornerLogo from '../../images/Corner-logo.png';
 const Page4 = ( props ) => {
 
 return (
-    <body>
     <div>
-        <Grid container spacing={2}>
         <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 1 - Personal Wellness { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h2>        <br/> Step 1 - Personal Wellness { /* get full name prop from WorkReadyPassportHandler */}</h2>
         <p>
         You will be asked questions about your commitment to a healthy lifestyle,
 including physical activity, eating and drinking habits and your sleep patterns.
@@ -38,13 +36,20 @@ onChange={props.handleChange} name={'personalWellness'} defaultValue={props.user
 >
         </TextField>
         </div>
+        <br/>
         </Grid>
+        <Grid item xs={12} className='handy-hints'>
+<h6 className='handy-hints-heading'>Handy Hints
+</h6>
+<p className='handy-hints-desc'>
+Manage personal diet, exercise and sleeping so you are work ready each day.
+</p>
+
         </Grid>
         <br/>
         <Button className= "Button" onClick={props.goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={props.goForward}>Next Step</Button>
     </div>
-    </body>
 )
 
 }

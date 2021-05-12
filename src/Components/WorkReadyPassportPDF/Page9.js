@@ -15,15 +15,13 @@ const Page6 = ( props ) => {
     }
 
 return (
-    <body>
     <div>
-        <Grid container spacing={2}>
         <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 6 - Drug Free { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h2>        <br/> Step 6 - Drug Free { /* get full name prop from WorkReadyPassportHandler */}</h2>
         <p>
         Explain why it is important to be drug free in the work place. Use the space
 below to prepare your thoughts around the job you are looking for. 
@@ -42,13 +40,22 @@ fullWidth
 >
         </TextField>
         </div>
+        <br/>
         </Grid>
+        <Grid item xs={12} className='handy-hints'>
+<h6 className='handy-hints-heading'>Handy Hints
+</h6>
+<p className='handy-hints-desc'>
+Being DRUG FREE is so important.
+Use what you have learnt to relate to the job you have researched.
+The interview panel will be interested in your comments.
+</p>
+
         </Grid>
         <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
-    </body>
 )
 
 }

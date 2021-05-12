@@ -6,6 +6,7 @@ import ForgetPass from "./Components/LoginandRegister/ForgetPass";
 import Home from "./Components/LoginandRegister/Home";
 import ProfilePage from "./Components/Profile/ProfilePage";
 import WorkReadyPassportHandler from "./Components/WorkReadyPassportPDF/WorkReadyPassportHandler";
+import './App.css';
 
 function App() {
   return (

@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import HeaderButtons from './headerbuttons';
-import StudentTable from './student-data-table';
-import EmployerTable from './employer-data-table';
-import './admin.css';
+import StudentTable from './DataTable/student-data-table';
+import EmployerTable from './DataTable/employer-data-table';
 import StudentProfile from './ProfileViews/Student-Profile-View';
+import Grid from '@material-ui/core/Grid';
+import SignUpMetricTotal from './metric-modules/signuptotals';
+import Todos from './Todos/TodoList';
 
 const AdminPage = () => {
 
@@ -14,45 +16,53 @@ const AdminPage = () => {
         //Main & home section of admin page. holds student and employer tables
         case "main":
             return (
-            <body>
-            <HeaderButtons
+            <div>
+                <div className='admin-page-header'>
+                <HeaderButtons
             functions={
-                [page, setPage]
-            
+                [page, setPage]  
             }
             />
-            <br/>
-            <StudentTable/>
-            <br/>
-            <EmployerTable/>
-            </body>
+            </div>
+            <Grid container spacing={2}>
+            <Grid item xs={4}>
+            <div className="admin-page-module-import">
+           <SignUpMetricTotal/>
+            </div>
+            </Grid>
+            <Grid item xs={8}>
+            <Todos/>
+            </Grid>
+            </Grid>
+            </div>
+            
               );
 
               //Student section of admin page. Has student table and student profile view.
         case "students":
             return (
-            <body>
+            <div>
+                <div className='admin-page-header'>
             <HeaderButtons
             functions={[page, setPage]}
             />
             <br/>
             <StudentTable/>
-            <br/>
-            <StudentProfile/>
-            </body> 
+            </div> 
+            </div>
             );
 
                 //Employer section of admin page. Has employer table and employer profile view.
         case "employers":
             return (
-            <body>
+            <div className='admin-page-header'>
             <HeaderButtons
             functions={[page, setPage]}
             />
             <br/>
             <EmployerTable/>
             <br/>
-            </body> 
+            </div> 
             );
       }
 

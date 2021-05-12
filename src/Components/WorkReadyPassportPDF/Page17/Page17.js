@@ -37,27 +37,23 @@ const Page17 = ( props ) => {
     }
 
     return (
-    <body>
-    <Grid container spacing={2} id='fields-container'>
+    <div>
     <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
-       <br/>
     </Grid>
         <Grid item xs={12}>
-            <br/>
-<h2> A Review of your Passport { /* get full name prop from WorkReadyPassportHandler */}</h2>
+<h2> <br/> A Review of your Passport { /* get full name prop from WorkReadyPassportHandler */}</h2>
 <br/><br/>
 <UserDetails
 userInformation={props.userInformation}
 handleChange={props.handleChange}
 />
     </Grid>
-    </Grid>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goBackward}>Save and Return to your Profile</Button>
     <Button className= "Button" onClick={downloadPDF}>Download PDF Version</Button>
-    </body>
+    </div>
 )
 
 }

@@ -1,9 +1,8 @@
 import { RowingSharp } from '@material-ui/icons';
 import React, {useState, useEffect} from 'react';
-import DataTable from './DataTable/index.js';
-import MockData from './mockData.json';
+import DataTable from './index.js';
+import MockData from '../mockData.json';
 import { CSVLink, CSVDownload } from "react-csv";
-import './admin.css';
 
 require ("es6-promise").polyfill();
 require("isomorphic-fetch");
@@ -28,17 +27,15 @@ function search(rows) {
 
 const columns = data[0] && Object.keys(data[0]);
 return (
-<div>
-    <h1>Students</h1>
+<div className='admin-page-tables'>
+    <h1>Student Records</h1>
     <CSVLink data={data}  filename={"WRK-students.csv"}>Download Student 
     Data as CSV<br/><br/></CSVLink>
-    <button>Add Student</button>
   <div>
-    <br/>
 <input type="text" value={q} width='100%' placeholder="Enter Search Term" onChange={(e) => setQ(e.target.value)}/>
   {
-    columns && columns.map(column => <label id="filters">
-      <input type="checkbox" checked={searchColumns.includes(column)}
+    columns && columns.map(column => <label id="admin-page-filters">
+      <input id="admin-page-filters" type="checkbox" checked={searchColumns.includes(column)}
       onChange={(e) => { const checked = searchColumns.includes(column)
       setSearchColumns(prev => checked
         ? prev.filter(sc => sc !== column)

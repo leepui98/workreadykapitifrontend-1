@@ -18,6 +18,7 @@
  {"id":"2","Full Name": "Mike", "Phone Number": "0281191140", "Email":"mike@gmail.com", "Date Created": "02/05/21", "Last Contact": "Today", "Contact Notes": "He will get back to us.", "Tags": "baker"}
  ],
  "students" : [
+    {"id":"1","Full Name": "Siiiii", "Phone Number": "0273033554", "Email":"spijk@gmail.com", "Date Created": "03/05/21", "Last Contact": "Today", "Contact Notes": "He will get back to us.", "Tags": "baker"},
     {"id":"1","Full Name": "Siiiii", "Phone Number": "0273033554", "Email":"spijk@gmail.com", "Date Created": "03/05/21", "Last Contact": "Today", "Contact Notes": "He will get back to us.", "Tags": "baker"}
     ] 
  }

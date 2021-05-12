@@ -15,15 +15,13 @@ const Page6 = ( props ) => {
     }
 
 return (
-    <body>
     <div>
-        <Grid container spacing={2}>
         <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
             <Grid item xs={12}>
-    <h3> Step 4 - Academic Achievements { /* get full name prop from WorkReadyPassportHandler */}</h3>
+    <h2>        <br/> Step 4 - Academic Achievements { /* get full name prop from WorkReadyPassportHandler */}</h2>
         <p>
         Provide details of all academic courses and training you have finished. Your NZQA Record of Learning provides complete 
         information about the achievement and unit standards that you have been assessed against. Please bring an up-to-date print 
@@ -45,12 +43,10 @@ fullWidth
         </TextField>
         </div>
         </Grid>
-        </Grid>
         <br/>
         <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Next Step</Button>
     </div>
-    </body>
 )
 
 }

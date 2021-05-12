@@ -16,15 +16,13 @@ const Page16 = ( props ) => {
     }
 
     return (
-        <body>
     <div>
-    <Grid container spacing={2}>
     <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
     </Grid>
         <Grid item xs={12}>
-<h3> Lastly - The Registration Form for Interviews. { /* get full name prop from WorkReadyPassportHandler */}</h3>
+<h2>        <br/> Lastly - The Registration Form for Interviews. { /* get full name prop from WorkReadyPassportHandler */}</h2>
     <div className='fields-container'>
     <TextField
 fullWidth
@@ -62,18 +60,17 @@ label="What Job are you Looking For?">
 fullWidth
 label="Which City?">
     </TextField>
-    <h3>Draw your electronic signature on the canvas below.</h3>
+   
+    <h3> <br/>Draw your electronic signature on the canvas below.</h3>
     <div className='signature-container'>
     <SignatureCanvas penColor='green' className='signature-area'
     canvasProps={{ className: 'sigCanvas'}} />
     </div>
     </div>
     </Grid>
-    </Grid>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={goForward}>Last Step</Button>
 </div>
-</body>
 )
 
 }
