@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { Form, Col, Row, Button,row} from "react-bootstrap";
 import "./_employerAddJob.scss";
 
-// function textAreaPopUp(){
-//     if(textAreaForRadio==true){
-//         return(
-//             <Form.Control type="payHoursText" id="inputToStyle" placeholder="Pay Per Hour"/>
-//         )
-//     }
-// }
+function textAreaPopUp(){
+    if(textAreaForRadio==true){
+        return(
+            <Form.Control type="payHoursText" id="inputToStyle" placeholder="Pay Per Hour"/>
+        )
+    }
+}
 export default function EmployerForm() {
     const[textAreaForRadio, setTextAreaForRadio]= useState(false)
-    // const textAreaComeUp= textAreaPopUp()
+
 
     return (
         <div>

@@ -1,18 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, Col, Row, Button,row} from "react-bootstrap";
 import "./_employerAddJob.scss";
 
-// function textAreaPopUp(){
-//     if(textAreaForRadio==true){
-//         return(
-//             <Form.Control type="payHoursText" id="inputToStyle" placeholder="Pay Per Hour"/>
-//         )
-//     }
-// }
-export default function EmployerForm() {
-    const[textAreaForRadio, setTextAreaForRadio]= useState(false)
-    // const textAreaComeUp= textAreaPopUp()
-
+export default function employerForm() {
     return (
         <div>
             <Form style={{marginTop:"40px"}}>
@@ -95,7 +85,6 @@ export default function EmployerForm() {
                             type={type}
                             name="formHorizontalPayHours"
                             id={`custom-inline-${type}-1`}
-                         
                         />
                         <Form.Check
                             custom
@@ -104,9 +93,8 @@ export default function EmployerForm() {
                             type={type}
                             name="formHorizontalPayHours"
                             id={`custom-inline-${type}-2`}
-                            onChange={setTextAreaForRadio(true)}
                         />
-                   
+                        
                         </div>
                     ))}
                         

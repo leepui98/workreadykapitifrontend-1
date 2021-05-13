@@ -20,7 +20,7 @@ export default function navigation() {
     <Navbar bg="dark" variant="dark">
         <Navbar.Brand >
           <img
-          src={"../images/WorkReadyKapitiTextBlack.jpg"}
+          src={Pic}
             alt="Kapiti Logo"
             width="180"
             height="50"
