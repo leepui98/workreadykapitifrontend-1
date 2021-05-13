@@ -36,15 +36,12 @@ export default function JobListing(){
     {jobtitle:"Analyst Programmer",companyname:"Wikivu",jobhours:'3hrs',jobpay:'$23',startdate:"start 7/12/2020",jobdescription:"nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula",listdate:"6/29/2020"},
     {jobtitle:"Food Chemist",companyname:"Yamia",jobhours:'7hrs',jobpay:'$23',startdate:"start 10/7/2020",jobdescription:"sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque",listdate:"4/30/2020"},
 ];
-const [page,setPage]=useState({minValue:0, maxValue:5});
+const [page,setPage]=useState(1);
 
-const HandleChangeNew = () => {
-  if (value<=1) {
-    setPage({})
-  }
-}
+
     
-const HandleChange= value =>{
+const HandleChange= (e,value) =>{
+
     if (value<=1){
         setPage({
             minValue:0, maxValue:5,
@@ -53,8 +50,8 @@ const HandleChange= value =>{
     
   else{
         setPage({
-            minValue:page.maxValue,
-            maxValue:page.maxValue *5
+            minValue:(value-1)*5,
+            maxValue:(value)*5
         })
   }
 }
@@ -112,12 +109,12 @@ const HandleChange= value =>{
       })} */}
       {/* <Pagination  onChange={HandleChange} total={3}/> */}
       <div className={classes.root} >
-      <Pagination count={5} onChange={HandleChange} defaultCurrent={5} defaultPageSize={cardEachPage} total={5}/>
+      <Pagination count={4}  onChange={HandleChange} defaultCurrent={1} defaultPageSize={cardEachPage} total={5}/>
           
         {mockData && mockData.length>0 && mockData.slice(page.minValue,page.maxValue).map(data => {
           return(<JobPost jobdata={data} />)
       })}  
-      <Pagination count={5} onChange={HandleChange} defaultCurrent={5} defaultPageSize={cardEachPage} total={5}/>
+    {/* <Pagination count={5} onChange={HandleChange} defaultCurrent={5} defaultPageSize={cardEachPage} total={5}/> */}
     </div>
   
     {/* <Pagination defaultCurrent={1} defaultPageSize={cardEachPage} onChange={HandleChange} total={3}/> */}
