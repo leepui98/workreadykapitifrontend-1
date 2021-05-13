@@ -16,25 +16,32 @@ const logoutLinks = {
 
 export default function navigation() {
   return (
-    <nav class="navbar navbar-light bg-light">
-        <img 
-        src="/images/WorkReadyKapitiTextBlack.jpg"
-        class="navbar-brand d-inline-block align-top"
-        className="logo"
-      />
-      <ul class="nav justify-content-center mx-auto">
-        {navLinks.map((link, index) => (
-          <li class="nav-item " key={index} className="limenu">
-            {/* <Link to={link.path}> {link.title}</Link> */}
-            {link.title}
-          </li>
-        ))}
-      </ul>
-      <ul class="nav justify-content-end">
-      <li class="nav-item" key={logoutLinks.title} className="lilogout" >
-          {logoutLinks.title}
-        </li>
-      </ul>
-    </nav>
+    <Navbar bg="dark" variant="dark">
+        <Navbar.Brand >
+          <img
+          src={Pic}
+            alt="Kapiti Logo"
+            width="180"
+            height="50"
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand>
+        <Nav className="justify-content-center m-auto">
+        <Nav.Item>
+        <Nav.Link className="navitemd" href="/profile" >Profile</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Nav.Link className="navitemd" href="/joblisting">JobListing</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+        <Nav.Link className="navitemd" href="/meetup">MeetUp</Nav.Link>
+        </Nav.Item>
+        <Nav.Link className="navitemd" href="/passport">Passport</Nav.Link>
+        </Nav>
+       <Nav>
+        <Nav.Link  href="/logout">Logout</Nav.Link>
+        </Nav>
+          
+      </Navbar>
   );
 }

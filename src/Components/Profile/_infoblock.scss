@@ -7,5 +7,19 @@
     width: 50%;
     align-items: center;
     text-align:center;
+.editIcon{
+    margin-left: 15px;
+    &:hover{
+        color:#2997ff;
+    }
 }
 
+.withValue{
+    font-size: 20px;
+}
+
+.withoutValue{
+    font-size: 15px;
+    color: gray;
+}
+}
