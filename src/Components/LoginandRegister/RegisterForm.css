@@ -1,3 +1,9 @@
+* {
+    align-items: flex-start;
+    color: black;
+    text-align: left;
+    }
+    
 #sub-div1-register{
   
     height: 100%;
@@ -9,6 +15,12 @@
     justify-content: space-between;
  
   
+}
+h1{
+    color:black;
+}
+div{
+    color: black;
 }
  #div_fields{
     width:600px ;
@@ -22,6 +34,47 @@
     color: black;
     font-weight: bold;
 
+}
+#ind_select_inputs{
+    margin-right: 10;
+ 
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: black;
+    font-weight: bold; 
+    display: flex;
+    justify-content: space-between;
+    
+    
+
+  
+   }
+#ind_input{
+   
+  
+    color: black;
+      display: flex;
+  }
+   #check-input{
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+   #inddiv{
+    display: flex;
+    justify-content: space-between;
+}
+#ind_check{
+    display: flex;
+    overflow-wrap:anywhere;
+    
+}
+
+.ind_ch{
+    width: 30px;
 }
 @media (max-width: 600px) {
     #img_background {
@@ -41,6 +94,7 @@
     background-size: cover;
     background-color:#F68B1F;
     text-align: center;
+    color: black;
 }
 .form-group input,.form-group textarea {
     padding: 20px;
