@@ -9,6 +9,9 @@ import Home from "./Components/LoginandRegister/Home";
 import ProfilePage from "./Components/Profile/ProfilePage";
 import WorkReadyPassportHandler from "./Components/WorkReadyPassportPDF/WorkReadyPassportHandler";
 import Logout from './Components/LoginandRegister/Logout';
+import JobListing from "./Components/JobListing/jobListing";
+import ProfileEmployer from "./Components/Profile/ProfileEmployer";
+import EmployerAddJob from "./Components/EmployerJobSubmission/employerAddJob"
 
 export default function App() {
   const [token, setToken] = React.useState('');
@@ -35,14 +38,17 @@ export default function App() {
           {/* <MainNavigation /> */}
           <main>
             <Switch>
-           
-              <Route path="/home" component={Home} />
-              <Route path="/register" component={Registerform} />
-              <Route path="/forgpass" component={ForgetPass} />
-              <Route path="/profile" component={ProfilePage} />
-              <Route path="/logout" component={Logout} />
-              <Route path="/kapitiworkreadypassport" component={WorkReadyPassportHandler} />
-              <Redirect to="/profile" />
+            <Route path="/login" component={Login}/>
+                 <Route path="/home" component={Home}/>
+                 <Route path="/register" component={Registerform}/>
+                 <Route path="/forgpass" component={ForgetPass}/>
+                 <Route path="/LoginPage" component={LoginPage}/>
+                 <Route path="/profile" component={ProfilePage} />
+                 <Route path="/kapitiworkreadypassport" component={WorkReadyPassportHandler} />
+                 <Route path="/joblisting" component={JobListing} />
+                 <Route path="/employerprofile" component={ProfileEmployer} />
+                 <Route path="/addJobEmployer" component={EmployerAddJob} />
+                 <Redirect to="/home"/> 
             </Switch>
           </main>
         </div>

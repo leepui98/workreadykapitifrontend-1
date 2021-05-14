@@ -1,5 +1,8 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Nav, Navbar, NavLink} from "react-bootstrap";
+import Pic from "../../images/WorkReadyKapitiTextBlack.jpg"
 import "./_navigation.scss";
 import { Nav, Navbar, NavLink} from "react-bootstrap";
 import Pic from "../../images/WorkReadyKapitiTextBlack.jpg"
@@ -37,6 +40,7 @@ export default function navigation() {
         <Nav.Item>
         <Nav.Link className="navitemd" href="/meetup">MeetUp</Nav.Link>
         </Nav.Item>
+        <Nav.Link className="navitemd" href="/passport">Passport</Nav.Link>
         </Nav>
        <Nav>
         <Nav.Link  href="/logout">Logout</Nav.Link>
