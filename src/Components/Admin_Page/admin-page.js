@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import HeaderButtons from './headerbuttons';
 import StudentTable from './DataTable/student-data-table';
 import EmployerTable from './DataTable/employer-data-table';
+import JobListingsTable from './DataTable/job-listing-table';
 import StudentProfile from './ProfileViews/Student-Profile-View';
 import Grid from '@material-ui/core/Grid';
 import SignUpMetricTotal from './metric-modules/signuptotals';
@@ -64,6 +65,18 @@ const AdminPage = () => {
             <br/>
             </div> 
             );
+
+            case "joblistings":
+                return (
+                <div className='admin-page-header'>
+                <HeaderButtons
+                functions={[page, setPage]}
+                />
+                <br/>
+                <JobListingsTable/>
+                <br/>
+                </div> 
+                );
       }
 
 }

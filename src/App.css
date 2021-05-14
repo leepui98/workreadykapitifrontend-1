@@ -107,6 +107,8 @@ button {
 }
 
 .todo-item-container {
-  border-style: solid;
+  border-left: solid;
+  border-top: solid;
+  border-right:solid;
   border-color:lightgray;
 }

@@ -9,6 +9,7 @@ return (
 <button className='header-buttons' onClick={() => setPage('main')}>Dashboard</button>
 <button className='header-buttons' onClick={() => setPage('students')}>Student Records</button>
 <button className='header-buttons' onClick={() => setPage('employers')}>Employer Records</button>
+<button className='header-buttons' onClick={() => setPage('joblistings')}>Job Listings</button>
 <br/>
 </div>
 );
