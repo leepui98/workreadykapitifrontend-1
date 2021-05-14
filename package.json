@@ -67,11 +67,7 @@
       "last 1 safari version"
     ]
   },
-<<<<<<< HEAD
-  "devDependencies": {}
-=======
   "devDependencies": {
     "prop-types": "^15.7.2"
   }
->>>>>>> origin/master
 }

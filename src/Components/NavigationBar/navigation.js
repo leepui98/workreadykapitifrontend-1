@@ -4,9 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Nav, Navbar, NavLink} from "react-bootstrap";
 import Pic from "../../images/WorkReadyKapitiTextBlack.jpg"
 import "./_navigation.scss";
-import { Nav, Navbar, NavLink} from "react-bootstrap";
-import Pic from "../../images/WorkReadyKapitiTextBlack.jpg"
-
 // const navLinks = [
 //   { title: "Profile", path: "/profile" },
 //   { title: "JobListing", path: "/joblisting" },

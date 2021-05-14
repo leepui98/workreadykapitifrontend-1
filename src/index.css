@@ -1,0 +1,115 @@
+* {
+    color: orange;
+    justify-content: center;
+  }
+  
+  h1 {
+    text-align: left;
+  }
+  h3 {
+    text-align: left;
+    color: orange;
+  }
+  
+  h2 {
+    color: orange;
+    text-align:center;
+  }
+  h4 {
+    text-align: center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+  }
+  
+  h5 {
+    color: white;
+  }
+  
+  h6 {
+    text-align: left;
+  }
+  p {
+    color: black;
+    text-align:justify;
+  }
+  
+  .foreword-wrapper {
+    border-style: solid;
+    padding: 5px;
+    border-color: orange;
+  }
+  
+  .textfield-container {
+    border-style: solid;
+    color: orange;
+    border-radius:2px;
+  }
+  
+  .handy-hints-heading {
+    background-color:darkorange;
+    border-width:6px;
+    color: white;
+    border-style:solid;
+  border-color:darkorange;
+  }
+  
+  .handy-hints-desc {
+  background-color:orange;
+  border-style:solid;
+  border-width:6px;
+  border-color:orange;
+  }
+  .handy-hints {
+    background-color:orange;
+  }
+  
+  .admin-page-header {
+    background-color: orange;
+    height:75px;
+    color: white;
+    justify-content: center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+  }
+  .admin-page-tables {
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  #admin-page-filters {
+    padding:15px;
+  }
+  
+  .admin-page-metric-modules-total {
+    background-color: orange;
+    color: white;
+    border-radius: 20%;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+  }
+  
+  button {
+    background-color: orange;
+    border-style:none;
+    height:75px;
+    color: white;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  
+  :hover {
+    color:black;
+  }
+  
+  .todo-item-container {
+    border-left: solid;
+    border-top: solid;
+    border-right:solid;
+    border-color:lightgray;
+  }
+  

@@ -16,6 +16,7 @@ import Page13 from './Page14';
 import Page14 from './Page15';
 import Page15 from './Page16';
 import Page16 from './Page17/Page17';
+import '../../App.css';
 
 const WorkReadyPassportHandler = () => {
 

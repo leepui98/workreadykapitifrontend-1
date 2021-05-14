@@ -6,8 +6,6 @@ import './Login.css';
 import { LOGIN_USER } from '../../GraphQL/Mutation';
 import { useMutation } from "@apollo/client"
 
-
-
 export default Login;
 
 Login.propTypes = {
