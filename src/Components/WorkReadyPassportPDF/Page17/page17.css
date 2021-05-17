@@ -1,28 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
-h4 {
-    text-align:left;
-    font-family: 'Anton', sans-serif;
-}
-
-.signature-container {
-    border-style: solid;
-}
-
-.signature-area {
-    border-style:solid;
-}
-body {
-    padding-left:5%;
-    padding-right:5%;
-    text-align:center;
-    align-content:center;
-    font-family: 'Anton', sans-serif;
-    
-}
-p {
-    text-align: left;
-    font-family: 'PT Sans Narrow', sans-serif;
-}
 

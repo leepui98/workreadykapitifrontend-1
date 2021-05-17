@@ -5,6 +5,7 @@ import ProfilePicture from '../Profile_Picture/PictureUploader';
 import Infoblock from './Infoblock';
 import Col from 'react-bootstrap/Col';
 import './_infoblockDesktop.scss';
+import PassportView from '../WorkReadyPassportPDF/work-ready-passport-view';
 
 export default function ProfilePageDesktop (){
 
@@ -26,8 +27,12 @@ export default function ProfilePageDesktop (){
             <div style={{marginBottom:"20px"}}>
             <Infoblock name="Contact Info"/>
             </div>
+            <div style={{marginBottom:"20px"}}>
+            <PassportView/>
+            </div>
             </Col>
             </div>
+
             </div>
             </div>
         );

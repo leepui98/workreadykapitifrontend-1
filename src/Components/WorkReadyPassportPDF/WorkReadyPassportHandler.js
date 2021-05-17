@@ -73,6 +73,7 @@ const WorkReadyPassportHandler = () => {
 
             case 1:
                 return (
+                    <body>
                     <Page1
                     step={step}
                     goForward={goForward}
@@ -81,10 +82,12 @@ const WorkReadyPassportHandler = () => {
                     handleChange={handleChange}
                     setUploadedImage={setUploadedImage}
                     />
+                    </body>
                 )
                 
             case 2:
                 return (
+                    <body>
                     <Page2
                     step={step}
                     goForward={goForward}
@@ -92,9 +95,11 @@ const WorkReadyPassportHandler = () => {
                     userInformation={userInformation}
                     handleChange={handleChange}
                     />
+                    </body>
                     )
             case 3:
                 return (
+                    <body>
                     <Page3
                     step={step}
                     goForward={goForward}
@@ -102,10 +107,13 @@ const WorkReadyPassportHandler = () => {
                     userInformation={userInformation}
                     handleChange={handleChange}
         
-                    />)
+                    />
+                    </body>
+                    )
             
             case 4:
                 return (
+                    <body>
                     <Page4
                     step={step}
                     goForward={goForward}
@@ -113,125 +121,150 @@ const WorkReadyPassportHandler = () => {
                     userInformation={userInformation}
                     handleChange={handleChange}
                 
-                    />)
+                    />
+                    </body>)
 
             case 5:
                 return (
+                    <body>
                     <Page5
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}
-                    />)
+                    />
+                    </body>)
 
             case 6:
                 return (
+                    <body>
                     <Page6
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}   
-                    />)
+                    />
+                    </body>)
 
             case 7:
                 return (
+                    <body>
                     <Page7
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}         
-                    />)
+                    />
+                    </body>)
 
             case 8:
                 return (
+                    <body>
                     <Page8
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}               
-                    />)
+                    />
+                    </body>)
 
             case 9:
                 return (
+                    <body>
                     <Page9
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}                          
-                    />)
+                    />
+                    </body>)
 
             case 10:
                 return (
+                    <body>
                     <Page10
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}                                
-                    />)
+                    />
+                    </body>)
 
             case 11:
                 return (
+                    <body>
                     <Page11
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}                                        
-                    />)
+                    />
+                    </body>)
 
             case 12:
                 return (
+                    <body>
                     <Page12
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}                                                 
-                    />)
+                    />
+                    </body>)
 
             case 13:
                 return (
+                    <body>
                     <Page13
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}
-                />)
+                />
+                </body>)
 
             case 14:
                 return (
+                    <body>
                     <Page14
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}
-                />)
+                />
+                </body>)
             case 15:
                 return (
+                    <body>
                     <Page15
                     step={step}
                     goForward={goForward}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}
-                />)
+                />
+                </body>)
             
             case 16:
                 return (
+                    <body>
                     <Page16
                     step={step}
                     goBackward={goBackward}
                     userInformation={userInformation}
                     handleChange={handleChange}
-               /> )
+               />
+               </body> )
 
         }
     }

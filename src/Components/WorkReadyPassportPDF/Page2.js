@@ -16,7 +16,7 @@ return (
     </Grid>
     <Grid item xs={12}>
         <br/>
-        <h2>Welcome to Your Digitized Kapiti Work Ready Passport</h2>
+        <h2>Welcome to Your Digitised Kapiti Work Ready Passport</h2>
         <br/>
 <ImageUploader 
 handleChange={props.handleChange}

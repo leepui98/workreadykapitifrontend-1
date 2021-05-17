@@ -1,10 +1,10 @@
 import Button from "@material-ui/core/Button";
 import * as React from 'react';
 import { Grid } from '@material-ui/core';
-import './page17.css';
 import CornerLogo from '../../../images/Corner-logo.png';
 import html2pdf from 'html2pdf.js';
 import UserDetails from "./UserDetails";
+import {BrowserRouter as Router, Switch,Route, Link} from "react-router-dom";
 
 
 
@@ -43,7 +43,7 @@ const Page17 = ( props ) => {
        <br/>
     </Grid>
         <Grid item xs={12}>
-<h2> <br/> A Review of your Passport { /* get full name prop from WorkReadyPassportHandler */}</h2>
+<h2> <br/> A Review of your Passport</h2>
 <br/><br/>
 <UserDetails
 userInformation={props.userInformation}
@@ -51,7 +51,7 @@ handleChange={props.handleChange}
 />
     </Grid>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
-    <Button className= "Button" onClick={goBackward}>Save and Return to your Profile</Button>
+    <Button id='nav-buttons' component={Link} to="/profile">Save and Return to Your Profile</Button>
     <Button className= "Button" onClick={downloadPDF}>Download PDF Version</Button>
     </div>
 )

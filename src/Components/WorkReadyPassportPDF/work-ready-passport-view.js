@@ -69,35 +69,6 @@ const WorkReadyPassportView = () => {
    </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>About Me</Typography>
-        </AccordionSummary>
-        <AccordionDetails contentEditable='true'>
-          <Typography>
-            I am cool. that is all.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Interests</Typography>
-        </AccordionSummary>
-        <AccordionDetails contentEditable='true'>
-          <Typography>
-            Baking, Woodwork
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
         </body>
     );
 }

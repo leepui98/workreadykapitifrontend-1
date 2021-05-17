@@ -1,4 +1,3 @@
-import './App.css';
 import LoginPage from './Components/LoginandRegister/Login';
 import {Route, Redirect, Switch, BrowserRouter as Router} from 'react-router-dom';
 import Login from "./Components/LoginandRegister/Login";
@@ -9,7 +8,8 @@ import ProfilePage from "./Components/Profile/ProfilePage";
 import WorkReadyPassportHandler from "./Components/WorkReadyPassportPDF/WorkReadyPassportHandler";
 import JobListing from "./Components/JobListing/jobListing";
 import ProfileEmployer from "./Components/Profile/ProfileEmployer";
-import EmployerAddJob from "./Components/EmployerJobSubmission/employerAddJob"
+import EmployerAddJob from "./Components/EmployerJobSubmission/employerAddJob";
+import './App.css';
 export default App;
 
 function App() {

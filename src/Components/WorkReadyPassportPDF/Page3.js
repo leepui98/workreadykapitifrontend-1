@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Grid, Fade } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import CornerLogo from '../../images/Corner-logo.png';
+import {BrowserRouter as Router, Switch,Route, Link} from "react-router-dom";
 
 const Page3 = ( props ) => {
 
@@ -50,6 +51,7 @@ assessed for the Passport as soon as you are ready.
 </div>
         </Grid>
         <br/>
+        <Button id='nav-buttons' component={Link} to="/profile">Back to your profile</Button>
         <Button id='nav-buttons' onClick={props.goBackward}>Previous Step</Button>
     <Button id='nav-buttons' onClick={props.goForward}>Next Step</Button>
     </div>

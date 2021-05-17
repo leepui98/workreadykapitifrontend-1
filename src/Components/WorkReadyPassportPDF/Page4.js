@@ -3,6 +3,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import CornerLogo from '../../images/Corner-logo.png';
+import {BrowserRouter as Router, Switch,Route, Link} from "react-router-dom";
 
 const Page4 = ( props ) => {
 
@@ -47,6 +48,7 @@ Manage personal diet, exercise and sleeping so you are work ready each day.
 
         </Grid>
         <br/>
+        <Button id='nav-buttons' component={Link} to="/profile">Back to your profile</Button>
         <Button className= "Button" onClick={props.goBackward}>Previous Step</Button>
     <Button className= "Button" onClick={props.goForward}>Next Step</Button>
     </div>
