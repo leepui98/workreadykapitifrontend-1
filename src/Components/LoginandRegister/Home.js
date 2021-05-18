@@ -13,7 +13,7 @@ function Home() {
             <div className='test-page-container'>
 
                         {/* <WorkReadyPassportHandler/> */}
-                        <AdminPage/>
+                        <LoginPage/>
 
 
                     </div>
