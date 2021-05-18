@@ -14,8 +14,7 @@ const Page17 = ( props ) => {
         props.goBackward(e.target.value);
     }
 
-    const downloadPDF = () => { //Could componentise this. would just need to pass in 'div' as a parameter, and replace 'fields-container' with 
-        //'div'. then initialise the div you want to capture on a button click.
+    const downloadPDF = () => { 
 
         var opt = {
             margin:       1,
@@ -37,7 +36,8 @@ const Page17 = ( props ) => {
     }
 
     return (
-    <div>
+        <div>
+    <div id='fields-container'>
     <Grid item xs={12}>
        <img src={CornerLogo} width='200px' height='200px'/>
        <br/>
@@ -50,9 +50,11 @@ userInformation={props.userInformation}
 handleChange={props.handleChange}
 />
     </Grid>
+    </div>
     <Button className= "Button" onClick={goBackward}>Previous Step</Button>
     <Button id='nav-buttons' component={Link} to="/profile">Save and Return to Your Profile</Button>
     <Button className= "Button" onClick={downloadPDF}>Download PDF Version</Button>
+    
     </div>
 )
 
