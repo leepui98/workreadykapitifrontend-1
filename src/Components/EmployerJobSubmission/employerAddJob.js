@@ -3,13 +3,13 @@ import { Form, Col, Row, Button,row} from "react-bootstrap";
 import "./_employerAddJob.scss";
 import useShowHide from "./HooksShowHide"
 import Navbar from '../NavigationBar/navigation'
+import { TRUE } from 'node-sass';
 
 export default function EmployerForm() {
     
     // const textAreaComeUp= textAreaPopUp()
-   const [TextBox, textBoxShowHide]=useShowHide(
-    <Form.Control type="Payrole" id="inputToStyle" className="text-center text-md-left" placeholder="$?"/>
-   );
+    const [showBox, setShowBox]=useState(false)
+
 
   
     return (
@@ -101,10 +101,11 @@ export default function EmployerForm() {
                             custom
                             inline
                             label="WEBX Placement"
+                            defaultValue = {true}
                             type={type}
                             name="formHorizontalPayHours"
                             id={`custom-inline-${type}-1`}
-                            onClick={()=>textBoxShowHide(null)}
+                            onClick={()=>setShowBox(false)}
                         />
                         <Form.Check
                             custom
@@ -113,7 +114,7 @@ export default function EmployerForm() {
                             type={type}
                             name="formHorizontalPayHours"
                             id={`custom-inline-${type}-2`}
-                            onClick={textBoxShowHide}
+                            onClick={()=>setShowBox(true)}
                         />
                    
                         </div>
@@ -122,7 +123,7 @@ export default function EmployerForm() {
                     </Col>
 
                    <Col sm={3}>
-                        {TextBox}
+                      {showBox? <Form.Control as="textbox" type="keyTasks" id="inputToStyle" className="text-center text-md-left" /> : null} 
                    </Col>
                     </Form.Group>
 
