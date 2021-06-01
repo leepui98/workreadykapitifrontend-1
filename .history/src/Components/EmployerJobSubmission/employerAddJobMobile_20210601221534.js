@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import { Form, Col, Row, Button,row} from "react-bootstrap";
 import "./_employerAddJob.scss";
+import useShowHide from "./HooksShowHide"
 import SideNavbar from '../NavigationBar/sideNavigation';
 import LogoUploader from './logoUploader'
 export default function EmployerForm() {
     
     // const textAreaComeUp= textAreaPopUp()
-    const [showBox, setShowBox]=useState(false)
+   const [TextBox, textBoxShowHide]=useShowHide(
+    <Form.Control type="Payrole" id="inputToStyle" className="text-center text-md-left" placeholder="$?"/>
+   );
 
   
     return (
@@ -102,18 +105,17 @@ export default function EmployerForm() {
                     <Form.Label column sm={3} className="labelStyle">
                         Pay Role
                     </Form.Label>
-                    <Col sm={7} style={{paddingLeft:"30px"}}>
+                    <Col sm={7} style={{paddingLeft:"40px"}}>
                     {['radio'].map((type) => (
                         <div key={`custom-inline-${type}`} className="mb-2">
                         <Form.Check
                             custom
                             inline
                             label="WEBX Placement"
-                            defaultValue = {true}
                             type={type}
                             name="formHorizontalPayHours"
                             id={`custom-inline-${type}-1`}
-                            onClick={()=>setShowBox(false)}
+                            onClick={()=>textBoxShowHide(null)}
                         />
                         <Form.Check
                             custom
@@ -122,7 +124,7 @@ export default function EmployerForm() {
                             type={type}
                             name="formHorizontalPayHours"
                             id={`custom-inline-${type}-2`}
-                            onClick={()=>setShowBox(true)}
+                            onClick={textBoxShowHide}
                         />
                    
                         </div>
@@ -132,8 +134,8 @@ export default function EmployerForm() {
                     <Form.Label column sm={3} className="labelStyle1">
                        {null} 
                     </Form.Label>
-                   <Col sm={3} style={{marginLeft:"90px", paddingLeft:"20px"}}>
-                   {showBox? <Form.Control  type="keyTasks" id="inputToStyle" className="text-center text-md-left" /> : null} 
+                   <Col sm={3} style={{marginLeft:"110px", paddingLeft:"50px"}}>
+                        {TextBox}
                    </Col>
                 
                     </Form.Group>
@@ -148,7 +150,7 @@ export default function EmployerForm() {
                        Photos of you allowed on website and social media
                     </Form.Label>
                     </Col>
-                    <Col sm={4} id="colMobileCheck">
+                    <Col sm={4} >
                 
                     <Form.Check type="checkbox" label="Yes" />
                    

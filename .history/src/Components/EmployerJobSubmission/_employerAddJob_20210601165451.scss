@@ -19,19 +19,8 @@
     color:black;
 }
 
-#col1{
+.col1{
     flex-basis: 0;
     flex-grow: 1;
     max-width: 50%;
-}
-
-#row1{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 10px;
-    margin-right: 0px;
-}
-
-#colMobileCheck{
-    max-width: 10%;
 }

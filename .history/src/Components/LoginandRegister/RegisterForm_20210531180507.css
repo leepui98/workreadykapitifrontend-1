@@ -1,0 +1,79 @@
+#sub-div1-register{
+  
+    height: 100%;
+    text-align: left;
+   
+    padding-top: 0px;
+    padding-bottom: 12vh;
+    display: flex;
+    justify-content: space-between;
+ 
+  
+}
+ #div_fields{
+    width:600px ;
+}
+#reg_status_div{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: black;
+    font-weight: bold;
+
+}
+@media (max-width: 600px) {
+    #img_background {
+      display: none;
+    }
+}
+
+#img_background{
+    width: 250px;
+    height: 250px;
+
+    background: border-box, url(../../../src/images/reg_page_img.jpg) no-repeat center center;
+    background-size: cover;
+}
+#main-div-register{
+    min-height: 100vh;
+    background-size: cover;
+    background-color:#F68B1F;
+    text-align: center;
+}
+.form-group input,.form-group textarea {
+    padding: 20px;
+}
+
+.form-group input{
+    width:100%;
+    height: 50px;
+    padding-left: 15px;
+    border:none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+.form-group label{
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.form-group input.form-control {
+    height:40px;
+}
+.form-group textarea.form-control {
+    height: 150px;
+    border: 1px solid #6d6b6b;
+}
+
+.form-control:focus {
+    border-color: #48484a;
+    box-shadow: none;
+}

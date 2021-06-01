@@ -148,7 +148,7 @@ export default function EmployerForm() {
                        Photos of you allowed on website and social media
                     </Form.Label>
                     </Col>
-                    <Col sm={4} id="colMobileCheck">
+                    <Col sm={4} >
                 
                     <Form.Check type="checkbox" label="Yes" />
                    

@@ -132,7 +132,7 @@ export default function EmployerForm() {
                     <Form.Label column sm={3} className="labelStyle1">
                        {null} 
                     </Form.Label>
-                   <Col sm={3} style={{marginLeft:"90px", paddingLeft:"20px"}}>
+                   <Col sm={3}>
                    {showBox? <Form.Control  type="keyTasks" id="inputToStyle" className="text-center text-md-left" /> : null} 
                    </Col>
                 
@@ -148,7 +148,7 @@ export default function EmployerForm() {
                        Photos of you allowed on website and social media
                     </Form.Label>
                     </Col>
-                    <Col sm={4} id="colMobileCheck">
+                    <Col sm={4} >
                 
                     <Form.Check type="checkbox" label="Yes" />
                    

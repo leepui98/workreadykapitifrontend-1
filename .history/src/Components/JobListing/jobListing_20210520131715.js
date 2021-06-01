@@ -69,30 +69,30 @@ const HandleChange= (e,value) =>{
       
     }) 
 
-    const [dataToBeSort, setDataToBeSort]= useState([]);
-    const [sortDataType, setSortDataType]=useState('listdate');
+    // const [dataToBeSort, setDataToBeSort]= useState([]);
+    // const [sortDataType, setSortDataType]=useState('listdate');
 
-    useEffect(() => {
-      const sortArray = type =>{
-        const types={
-          listdate:'listdate',
-          startdate:'startdate',
-          jobpay:'jobpay',
-        };
-        const sortProperty= types[type];
-        const datasorted=[...mockData].sort((a,b) => b[sortProperty]-a[sortProperty]);
-        setDataToBeSort(datasorted);
-      };
-      sortArray(sortDataType);
-    }, [sortDataType])
+    // useEffect(() => {
+    //   const sortArray = type =>{
+    //     const types={
+    //       listdate:'listdate',
+    //       startdate:'startdate',
+    //       jobpay:'jobpay',
+    //     };
+    //     const sortProperty= types[type];
+    //     const datasorted=[...mockData].sort((a,b) => b[sortProperty]-a[sortProperty]);
+    //     setDataToBeSort(datasorted);
+    //   };
+    //   sortArray(sortDataType);
+    // }, [sortDataType])
 
     const classes = useStyles();
 
-    // mockData.sort(function(a,b) {
-    // var d1= new Date (a.listdate);
-    // var d2 = new Date (b.listdate);
-    // return d1-d2;
-    // });
+    mockData.sort(function(a,b) {
+    var d1= new Date (a.listdate);
+    var d2 = new Date (b.listdate);
+    return d1-d2;
+    });
 
     return(
         <div>

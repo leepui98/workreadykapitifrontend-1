@@ -57,7 +57,7 @@ const JobPost= props => {
           >
             {extend ? 'Hide' : 'View Job Description'}
           </Button>
-          <Button style={{marginLeft:"30px"}} onClick={() => window.open("/messageApply", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")}>
+          <Button style={{marginLeft:"30px"}} onClick={() => window.open(MessageApply, "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")}>
             Apply
           </Button>
         </Card.Text>

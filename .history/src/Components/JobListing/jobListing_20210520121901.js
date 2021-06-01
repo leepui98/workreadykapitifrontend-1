@@ -88,11 +88,6 @@ const HandleChange= (e,value) =>{
 
     const classes = useStyles();
 
-    // mockData.sort(function(a,b) {
-    // var d1= new Date (a.listdate);
-    // var d2 = new Date (b.listdate);
-    // return d1-d2;
-    // });
 
     return(
         <div>

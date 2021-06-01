@@ -88,11 +88,6 @@ const HandleChange= (e,value) =>{
 
     const classes = useStyles();
 
-    // mockData.sort(function(a,b) {
-    // var d1= new Date (a.listdate);
-    // var d2 = new Date (b.listdate);
-    // return d1-d2;
-    // });
 
     return(
         <div>
@@ -111,7 +106,7 @@ const HandleChange= (e,value) =>{
       </div>
       <Pagination count={4}  onChange={HandleChange} defaultCurrent={1} defaultPageSize={cardEachPage} total={5}/>
           
-      {searchItem && searchItem.length>0 &&dataToBeSort && searchItem.slice(page.minValue,page.maxValue).map(data => {
+      {searchItem && searchItem.length>0 &&sortDataType && searchItem.slice(page.minValue,page.maxValue).map(data => {
           return(<JobPost jobdata={data} />)
       })} 
     
