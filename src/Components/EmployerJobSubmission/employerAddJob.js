@@ -3,6 +3,7 @@ import { Form, Col, Row, Button,row} from "react-bootstrap";
 import "./_employerAddJob.scss";
 import Navbar from '../NavigationBar/navigation'
 import LogoUploader from './logoUploader'
+import { TRUE } from 'node-sass';
 
 export default function EmployerForm() {
     
