@@ -11,7 +11,7 @@ export default function ProfilePageMobile(){
     return(
             <div>
             <SideNavbar/>
-            <div class="d-flex justify-content-center align-items-center" style={{height:"100%", width:"100%", paddingLeft:"160px", paddingTop:"50px"}}>
+            <div class="d-flex justify-content-center align-items-center" style={{height:"100%", width:"100%", paddingLeft:"50px", paddingTop:"50px"}}>
             <ProfilePicture />
             </div>
             <div class="d-flex justify-content-center align-items-center" className="infoBlockMobile" style={{width:"110%", marginLeft:"5px", paddingLeft:"30px" }}>

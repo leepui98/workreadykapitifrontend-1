@@ -5,16 +5,17 @@ import { Nav, Navbar, NavLink} from "react-bootstrap";
 import Pic from "../../images/WorkReadyKapitiTextBlack.jpg"
 import "./_navigation.scss";
 
-const navLinks = [
-  { title: "Profile", path: "/profile" },
-  { title: "JobListing", path: "/joblisting" },
-  { title: "MeetUp", path: "/meetup" },
-];
 
-const logoutLinks = {
-  title: "Logout",
-  path: "/logout",
-};
+// const navLinks = [
+//   { title: "Profile", path: "/profile" },
+//   { title: "JobListing", path: "/joblisting" },
+//   { title: "MeetUp", path: "/meetup" },
+// ];
+
+// const logoutLinks = {
+//   title: "Logout",
+//   path: "/logout",
+// };
 
 export default function navigation() {
   return (
