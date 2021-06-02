@@ -1,0 +1,33 @@
+#inputToStyle{
+    border: 3px solid orange;
+}
+
+.labelStyle{
+    background-color: orange;
+   border-radius: 10px;
+   margin-block-start: -7px;
+   
+}
+
+
+.form-group label{
+    color:white;
+}
+
+
+.form-group label {
+    color:black;
+}
+
+#col1{
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 50%;
+}
+
+#row1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: none;
+}

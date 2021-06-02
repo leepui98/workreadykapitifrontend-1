@@ -1,0 +1,39 @@
+.navbar{
+    height: 80px;
+    width: 100%;
+    background: white;
+    float:none;
+}
+
+ul{
+    height: 100%;
+    margin-block-start:0;
+    margin-block-end:0;
+    padding-inline-start:0;
+    display:flex;
+    align-items:center;
+    list-style-type:none;
+}
+
+.limenu{
+    display:inline-block; 
+    padding: 0 80px 0px 80px;
+    margin-left: 60px;
+    color: #444;
+}
+
+.lilogout{
+    margin-right: 20px;
+    color:#444;
+}
+
+.logo{
+    position: relative;
+    width: 170px;
+    left: 15px;
+}
+
+.navitemd{
+    margin-right: 50px;
+    text-size-adjust: 20px;
+}
