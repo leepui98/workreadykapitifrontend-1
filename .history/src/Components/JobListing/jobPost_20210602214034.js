@@ -33,7 +33,7 @@ const JobPost= props => {
             <Card.Body>
             <div className="d-flex justify-content-between">
                 
-            <Card.Title className="titleLarger">
+            <Card.Title>
               {props.jobdata.jobtitle} - <span className="text-muted font-weight-light"><a href="/employerprofile">{props.jobdata.companyname}</a></span>
               
             </Card.Title>

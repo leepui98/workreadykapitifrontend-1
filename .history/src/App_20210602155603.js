@@ -13,7 +13,7 @@ import ProfileEmployer from "./Components/Profile/ProfileEmployer";
 import EmployerAddJob from "./Components/EmployerJobSubmission/employerAddJobScreenControl"
 import MessageApply from './Components/JobListing/applyMessage'
 import Logout from './Components/LoginandRegister/Logout';
-// export default App;
+export default App;
 
 // function App() {
 //   const [token, setToken] = React.useState('');
@@ -74,7 +74,7 @@ function App() {
                  <Route path="/home" component={Home}/>
                  <Route path="/register" component={Registerform}/>
                  <Route path="/forgpass" component={ForgetPass}/>
-                 {/* <Route path="/LoginPage" component={LoginPage}/> */}
+                 <Route path="/LoginPage" component={LoginPage}/>
                  <Route path="/profile" component={ProfilePage} />
                  <Route path="/kapitiworkreadypassport" component={WorkReadyPassportHandler} />
                  <Route path="/joblisting" component={JobListing} />

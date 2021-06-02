@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
-import SideNavbar from '../NavigationBar/sideNavigation';
+import NavBar from '../NavigationBar/navigation';
 import JobPost from './jobPost'
 import { makeStyles } from '@material-ui/core/styles';
 import Pagination from '@material-ui/lab/Pagination';
@@ -89,20 +89,25 @@ const HandleChange= (e,value) =>{
 
     const classes = useStyles();
 
+    // mockData.sort(function(a,b) {
+    // var d1= new Date (a.listdate);
+    // var d2 = new Date (b.listdate);
+    // return d1-d2;
+    // });
 
     return(
         <div>
-        <SideNavbar/>
+        <NavBar/>
         
         <Container className="my-4">
       
       <div className={classes.root} >
       <div className="d-flex justify-content-between">
-      <input type="text" placeholder="Enter keywords to search..."  onChange={(e)=>handleSearch(e)} className="searchText" style={{width:"40%"}}/>
-      <select className="optionStyle" onChange={(e)=>setSortDataType(e.target.value)}>
-        <option value="listdate" className="optionStyle">Sort Latest List Date</option>
-        <option value="startdate" className="optionStyle">Sort Recent Start Date</option>
-        <option value="jobpay" className="optionStyle">Sort Highest Pay</option>
+      <input type="text" placeholder="Enter keywords to search..."  onChange={(e)=>handleSearch(e)} className="searchText" style={{width:"30%"}}/>
+      <select onChange={(e)=>setSortDataType(e.target.value)}>
+        <option value="listdate" className="optionstyle">Sort Latest List Date</option>
+        <option value="startdate" className="optionstyle">Sort Recent Start Date</option>
+        <option value="jobpay" className="optionstyle">Sort Highest Pay</option>
       </select>
       </div>
       <Pagination count={4}  onChange={HandleChange} defaultCurrent={1} defaultPageSize={cardEachPage} total={5}/>

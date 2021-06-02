@@ -74,7 +74,7 @@ function App() {
                  <Route path="/home" component={Home}/>
                  <Route path="/register" component={Registerform}/>
                  <Route path="/forgpass" component={ForgetPass}/>
-                 {/* <Route path="/LoginPage" component={LoginPage}/> */}
+                 <Route path="/LoginPage" component={LoginPage}/>
                  <Route path="/profile" component={ProfilePage} />
                  <Route path="/kapitiworkreadypassport" component={WorkReadyPassportHandler} />
                  <Route path="/joblisting" component={JobListing} />

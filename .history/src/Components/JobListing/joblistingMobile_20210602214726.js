@@ -5,7 +5,6 @@ import SideNavbar from '../NavigationBar/sideNavigation';
 import JobPost from './jobPost'
 import { makeStyles } from '@material-ui/core/styles';
 import Pagination from '@material-ui/lab/Pagination';
-import "./_jobPost.scss";
 // import {mockData} from './mockData'
 // import Table from './table';
 
@@ -99,10 +98,10 @@ const HandleChange= (e,value) =>{
       <div className={classes.root} >
       <div className="d-flex justify-content-between">
       <input type="text" placeholder="Enter keywords to search..."  onChange={(e)=>handleSearch(e)} className="searchText" style={{width:"40%"}}/>
-      <select className="optionStyle" onChange={(e)=>setSortDataType(e.target.value)}>
-        <option value="listdate" className="optionStyle">Sort Latest List Date</option>
-        <option value="startdate" className="optionStyle">Sort Recent Start Date</option>
-        <option value="jobpay" className="optionStyle">Sort Highest Pay</option>
+      <select onChange={(e)=>setSortDataType(e.target.value)}>
+        <option value="listdate">Sort Latest List Date</option>
+        <option value="startdate">Sort Recent Start Date</option>
+        <option value="jobpay">Sort Highest Pay</option>
       </select>
       </div>
       <Pagination count={4}  onChange={HandleChange} defaultCurrent={1} defaultPageSize={cardEachPage} total={5}/>
